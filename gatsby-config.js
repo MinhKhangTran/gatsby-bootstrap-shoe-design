@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+});
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
@@ -19,6 +23,12 @@ module.exports = {
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-source-graphcms",
+      options: {
+        endpoint: process.env.GRAPHCMS_ENDPOINT,
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

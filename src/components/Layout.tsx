@@ -10,8 +10,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <>
       <SkipNavLink />
       <div>
-        <Navigation />
-        <SkipNavContent />
         <main>{children}</main>
         <Footer />
       </div>
