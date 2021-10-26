@@ -1,0 +1,16 @@
+.feat_text_heading {
+  font-size: 1rem;
+}
+.feature_main_sub {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 992px) {
+  .feature_main_heading {
+    text-align: center;
+  }
+  .feature_main_sub {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+}

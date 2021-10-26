@@ -27,9 +27,10 @@ const Hero = () => {
             </div>
             <div className="hero_socials_wrapper d-lg-flex align-items-center">
               <div className="hero_wrapper d-flex justify-content-center mt-4 mt-lg-0">
-                {hero.heroCustomers.map((customer) => {
+                {hero.heroCustomers.map((customer, index) => {
                   return (
                     <GatsbyImage
+                      key={index}
                       // @ts-expect-error
                       image={getImage(customer.heroCustomerImg.gatsbyImageData)}
                       alt={customer.alt!}

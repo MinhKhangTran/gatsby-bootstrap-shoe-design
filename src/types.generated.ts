@@ -1798,6 +1798,1226 @@ export type GraphCms_AssetSortInput = {
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
 };
 
+export type GraphCms_Feature = Node & {
+  children: Array<Node>;
+  createdAt: Scalars["JSON"];
+  createdBy?: Maybe<GraphCms_User>;
+  desc?: Maybe<Scalars["String"]>;
+  featureIcons: Array<GraphCms_FeatureIcon>;
+  id: Scalars["ID"];
+  internal: Internal;
+  parent?: Maybe<Node>;
+  publishedAt?: Maybe<Scalars["JSON"]>;
+  publishedBy?: Maybe<GraphCms_User>;
+  remoteId: Scalars["ID"];
+  remoteTypeName: Scalars["String"];
+  stage: GraphCms_Stage;
+  title?: Maybe<Scalars["String"]>;
+  updatedAt: Scalars["JSON"];
+  updatedBy?: Maybe<GraphCms_User>;
+};
+
+export type GraphCms_FeatureConnection = {
+  distinct: Array<Scalars["String"]>;
+  edges: Array<GraphCms_FeatureEdge>;
+  group: Array<GraphCms_FeatureGroupConnection>;
+  max?: Maybe<Scalars["Float"]>;
+  min?: Maybe<Scalars["Float"]>;
+  nodes: Array<GraphCms_Feature>;
+  pageInfo: PageInfo;
+  sum?: Maybe<Scalars["Float"]>;
+  totalCount: Scalars["Int"];
+};
+
+export type GraphCms_FeatureConnectionDistinctArgs = {
+  field: GraphCms_FeatureFieldsEnum;
+};
+
+export type GraphCms_FeatureConnectionGroupArgs = {
+  field: GraphCms_FeatureFieldsEnum;
+  limit?: Maybe<Scalars["Int"]>;
+  skip?: Maybe<Scalars["Int"]>;
+};
+
+export type GraphCms_FeatureConnectionMaxArgs = {
+  field: GraphCms_FeatureFieldsEnum;
+};
+
+export type GraphCms_FeatureConnectionMinArgs = {
+  field: GraphCms_FeatureFieldsEnum;
+};
+
+export type GraphCms_FeatureConnectionSumArgs = {
+  field: GraphCms_FeatureFieldsEnum;
+};
+
+export type GraphCms_FeatureEdge = {
+  next?: Maybe<GraphCms_Feature>;
+  node: GraphCms_Feature;
+  previous?: Maybe<GraphCms_Feature>;
+};
+
+export enum GraphCms_FeatureFieldsEnum {
+  Children = "children",
+  ChildrenChildren = "children___children",
+  ChildrenChildrenChildren = "children___children___children",
+  ChildrenChildrenChildrenChildren = "children___children___children___children",
+  ChildrenChildrenChildrenId = "children___children___children___id",
+  ChildrenChildrenId = "children___children___id",
+  ChildrenChildrenInternalContent = "children___children___internal___content",
+  ChildrenChildrenInternalContentDigest = "children___children___internal___contentDigest",
+  ChildrenChildrenInternalDescription = "children___children___internal___description",
+  ChildrenChildrenInternalFieldOwners = "children___children___internal___fieldOwners",
+  ChildrenChildrenInternalIgnoreType = "children___children___internal___ignoreType",
+  ChildrenChildrenInternalMediaType = "children___children___internal___mediaType",
+  ChildrenChildrenInternalOwner = "children___children___internal___owner",
+  ChildrenChildrenInternalType = "children___children___internal___type",
+  ChildrenChildrenParentChildren = "children___children___parent___children",
+  ChildrenChildrenParentId = "children___children___parent___id",
+  ChildrenId = "children___id",
+  ChildrenInternalContent = "children___internal___content",
+  ChildrenInternalContentDigest = "children___internal___contentDigest",
+  ChildrenInternalDescription = "children___internal___description",
+  ChildrenInternalFieldOwners = "children___internal___fieldOwners",
+  ChildrenInternalIgnoreType = "children___internal___ignoreType",
+  ChildrenInternalMediaType = "children___internal___mediaType",
+  ChildrenInternalOwner = "children___internal___owner",
+  ChildrenInternalType = "children___internal___type",
+  ChildrenParentChildren = "children___parent___children",
+  ChildrenParentChildrenChildren = "children___parent___children___children",
+  ChildrenParentChildrenId = "children___parent___children___id",
+  ChildrenParentId = "children___parent___id",
+  ChildrenParentInternalContent = "children___parent___internal___content",
+  ChildrenParentInternalContentDigest = "children___parent___internal___contentDigest",
+  ChildrenParentInternalDescription = "children___parent___internal___description",
+  ChildrenParentInternalFieldOwners = "children___parent___internal___fieldOwners",
+  ChildrenParentInternalIgnoreType = "children___parent___internal___ignoreType",
+  ChildrenParentInternalMediaType = "children___parent___internal___mediaType",
+  ChildrenParentInternalOwner = "children___parent___internal___owner",
+  ChildrenParentInternalType = "children___parent___internal___type",
+  ChildrenParentParentChildren = "children___parent___parent___children",
+  ChildrenParentParentId = "children___parent___parent___id",
+  CreatedAt = "createdAt",
+  CreatedByChildren = "createdBy___children",
+  CreatedByChildrenChildren = "createdBy___children___children",
+  CreatedByChildrenChildrenChildren = "createdBy___children___children___children",
+  CreatedByChildrenChildrenId = "createdBy___children___children___id",
+  CreatedByChildrenId = "createdBy___children___id",
+  CreatedByChildrenInternalContent = "createdBy___children___internal___content",
+  CreatedByChildrenInternalContentDigest = "createdBy___children___internal___contentDigest",
+  CreatedByChildrenInternalDescription = "createdBy___children___internal___description",
+  CreatedByChildrenInternalFieldOwners = "createdBy___children___internal___fieldOwners",
+  CreatedByChildrenInternalIgnoreType = "createdBy___children___internal___ignoreType",
+  CreatedByChildrenInternalMediaType = "createdBy___children___internal___mediaType",
+  CreatedByChildrenInternalOwner = "createdBy___children___internal___owner",
+  CreatedByChildrenInternalType = "createdBy___children___internal___type",
+  CreatedByChildrenParentChildren = "createdBy___children___parent___children",
+  CreatedByChildrenParentId = "createdBy___children___parent___id",
+  CreatedByCreatedAt = "createdBy___createdAt",
+  CreatedById = "createdBy___id",
+  CreatedByInternalContent = "createdBy___internal___content",
+  CreatedByInternalContentDigest = "createdBy___internal___contentDigest",
+  CreatedByInternalDescription = "createdBy___internal___description",
+  CreatedByInternalFieldOwners = "createdBy___internal___fieldOwners",
+  CreatedByInternalIgnoreType = "createdBy___internal___ignoreType",
+  CreatedByInternalMediaType = "createdBy___internal___mediaType",
+  CreatedByInternalOwner = "createdBy___internal___owner",
+  CreatedByInternalType = "createdBy___internal___type",
+  CreatedByIsActive = "createdBy___isActive",
+  CreatedByKind = "createdBy___kind",
+  CreatedByName = "createdBy___name",
+  CreatedByParentChildren = "createdBy___parent___children",
+  CreatedByParentChildrenChildren = "createdBy___parent___children___children",
+  CreatedByParentChildrenId = "createdBy___parent___children___id",
+  CreatedByParentId = "createdBy___parent___id",
+  CreatedByParentInternalContent = "createdBy___parent___internal___content",
+  CreatedByParentInternalContentDigest = "createdBy___parent___internal___contentDigest",
+  CreatedByParentInternalDescription = "createdBy___parent___internal___description",
+  CreatedByParentInternalFieldOwners = "createdBy___parent___internal___fieldOwners",
+  CreatedByParentInternalIgnoreType = "createdBy___parent___internal___ignoreType",
+  CreatedByParentInternalMediaType = "createdBy___parent___internal___mediaType",
+  CreatedByParentInternalOwner = "createdBy___parent___internal___owner",
+  CreatedByParentInternalType = "createdBy___parent___internal___type",
+  CreatedByParentParentChildren = "createdBy___parent___parent___children",
+  CreatedByParentParentId = "createdBy___parent___parent___id",
+  CreatedByPicture = "createdBy___picture",
+  CreatedByPublishedAt = "createdBy___publishedAt",
+  CreatedByRemoteId = "createdBy___remoteId",
+  CreatedByRemoteTypeName = "createdBy___remoteTypeName",
+  CreatedByStage = "createdBy___stage",
+  CreatedByUpdatedAt = "createdBy___updatedAt",
+  Desc = "desc",
+  FeatureIcons = "featureIcons",
+  FeatureIconsChildren = "featureIcons___children",
+  FeatureIconsChildrenChildren = "featureIcons___children___children",
+  FeatureIconsChildrenChildrenChildren = "featureIcons___children___children___children",
+  FeatureIconsChildrenChildrenId = "featureIcons___children___children___id",
+  FeatureIconsChildrenId = "featureIcons___children___id",
+  FeatureIconsChildrenInternalContent = "featureIcons___children___internal___content",
+  FeatureIconsChildrenInternalContentDigest = "featureIcons___children___internal___contentDigest",
+  FeatureIconsChildrenInternalDescription = "featureIcons___children___internal___description",
+  FeatureIconsChildrenInternalFieldOwners = "featureIcons___children___internal___fieldOwners",
+  FeatureIconsChildrenInternalIgnoreType = "featureIcons___children___internal___ignoreType",
+  FeatureIconsChildrenInternalMediaType = "featureIcons___children___internal___mediaType",
+  FeatureIconsChildrenInternalOwner = "featureIcons___children___internal___owner",
+  FeatureIconsChildrenInternalType = "featureIcons___children___internal___type",
+  FeatureIconsChildrenParentChildren = "featureIcons___children___parent___children",
+  FeatureIconsChildrenParentId = "featureIcons___children___parent___id",
+  FeatureIconsCreatedAt = "featureIcons___createdAt",
+  FeatureIconsCreatedByChildren = "featureIcons___createdBy___children",
+  FeatureIconsCreatedByChildrenChildren = "featureIcons___createdBy___children___children",
+  FeatureIconsCreatedByChildrenId = "featureIcons___createdBy___children___id",
+  FeatureIconsCreatedByCreatedAt = "featureIcons___createdBy___createdAt",
+  FeatureIconsCreatedById = "featureIcons___createdBy___id",
+  FeatureIconsCreatedByInternalContent = "featureIcons___createdBy___internal___content",
+  FeatureIconsCreatedByInternalContentDigest = "featureIcons___createdBy___internal___contentDigest",
+  FeatureIconsCreatedByInternalDescription = "featureIcons___createdBy___internal___description",
+  FeatureIconsCreatedByInternalFieldOwners = "featureIcons___createdBy___internal___fieldOwners",
+  FeatureIconsCreatedByInternalIgnoreType = "featureIcons___createdBy___internal___ignoreType",
+  FeatureIconsCreatedByInternalMediaType = "featureIcons___createdBy___internal___mediaType",
+  FeatureIconsCreatedByInternalOwner = "featureIcons___createdBy___internal___owner",
+  FeatureIconsCreatedByInternalType = "featureIcons___createdBy___internal___type",
+  FeatureIconsCreatedByIsActive = "featureIcons___createdBy___isActive",
+  FeatureIconsCreatedByKind = "featureIcons___createdBy___kind",
+  FeatureIconsCreatedByName = "featureIcons___createdBy___name",
+  FeatureIconsCreatedByParentChildren = "featureIcons___createdBy___parent___children",
+  FeatureIconsCreatedByParentId = "featureIcons___createdBy___parent___id",
+  FeatureIconsCreatedByPicture = "featureIcons___createdBy___picture",
+  FeatureIconsCreatedByPublishedAt = "featureIcons___createdBy___publishedAt",
+  FeatureIconsCreatedByRemoteId = "featureIcons___createdBy___remoteId",
+  FeatureIconsCreatedByRemoteTypeName = "featureIcons___createdBy___remoteTypeName",
+  FeatureIconsCreatedByStage = "featureIcons___createdBy___stage",
+  FeatureIconsCreatedByUpdatedAt = "featureIcons___createdBy___updatedAt",
+  FeatureIconsFeatDesc = "featureIcons___featDesc",
+  FeatureIconsFeatTitle = "featureIcons___featTitle",
+  FeatureIconsId = "featureIcons___id",
+  FeatureIconsImgChildren = "featureIcons___img___children",
+  FeatureIconsImgChildrenChildren = "featureIcons___img___children___children",
+  FeatureIconsImgChildrenId = "featureIcons___img___children___id",
+  FeatureIconsImgCreatedAt = "featureIcons___img___createdAt",
+  FeatureIconsImgCreatedByChildren = "featureIcons___img___createdBy___children",
+  FeatureIconsImgCreatedByCreatedAt = "featureIcons___img___createdBy___createdAt",
+  FeatureIconsImgCreatedById = "featureIcons___img___createdBy___id",
+  FeatureIconsImgCreatedByIsActive = "featureIcons___img___createdBy___isActive",
+  FeatureIconsImgCreatedByKind = "featureIcons___img___createdBy___kind",
+  FeatureIconsImgCreatedByName = "featureIcons___img___createdBy___name",
+  FeatureIconsImgCreatedByPicture = "featureIcons___img___createdBy___picture",
+  FeatureIconsImgCreatedByPublishedAt = "featureIcons___img___createdBy___publishedAt",
+  FeatureIconsImgCreatedByRemoteId = "featureIcons___img___createdBy___remoteId",
+  FeatureIconsImgCreatedByRemoteTypeName = "featureIcons___img___createdBy___remoteTypeName",
+  FeatureIconsImgCreatedByStage = "featureIcons___img___createdBy___stage",
+  FeatureIconsImgCreatedByUpdatedAt = "featureIcons___img___createdBy___updatedAt",
+  FeatureIconsImgFileName = "featureIcons___img___fileName",
+  FeatureIconsImgHandle = "featureIcons___img___handle",
+  FeatureIconsImgHeight = "featureIcons___img___height",
+  FeatureIconsImgHeroCustomerImgHeroCustomer = "featureIcons___img___heroCustomerImgHeroCustomer",
+  FeatureIconsImgHeroCustomerImgHeroCustomerAlt = "featureIcons___img___heroCustomerImgHeroCustomer___alt",
+  FeatureIconsImgHeroCustomerImgHeroCustomerChildren = "featureIcons___img___heroCustomerImgHeroCustomer___children",
+  FeatureIconsImgHeroCustomerImgHeroCustomerCreatedAt = "featureIcons___img___heroCustomerImgHeroCustomer___createdAt",
+  FeatureIconsImgHeroCustomerImgHeroCustomerId = "featureIcons___img___heroCustomerImgHeroCustomer___id",
+  FeatureIconsImgHeroCustomerImgHeroCustomerPublishedAt = "featureIcons___img___heroCustomerImgHeroCustomer___publishedAt",
+  FeatureIconsImgHeroCustomerImgHeroCustomerRemoteId = "featureIcons___img___heroCustomerImgHeroCustomer___remoteId",
+  FeatureIconsImgHeroCustomerImgHeroCustomerRemoteTypeName = "featureIcons___img___heroCustomerImgHeroCustomer___remoteTypeName",
+  FeatureIconsImgHeroCustomerImgHeroCustomerStage = "featureIcons___img___heroCustomerImgHeroCustomer___stage",
+  FeatureIconsImgHeroCustomerImgHeroCustomerUpdatedAt = "featureIcons___img___heroCustomerImgHeroCustomer___updatedAt",
+  FeatureIconsImgHeroImageHero = "featureIcons___img___heroImageHero",
+  FeatureIconsImgHeroImageHeroChildren = "featureIcons___img___heroImageHero___children",
+  FeatureIconsImgHeroImageHeroCreatedAt = "featureIcons___img___heroImageHero___createdAt",
+  FeatureIconsImgHeroImageHeroHeroCta = "featureIcons___img___heroImageHero___heroCta",
+  FeatureIconsImgHeroImageHeroHeroCustomers = "featureIcons___img___heroImageHero___heroCustomers",
+  FeatureIconsImgHeroImageHeroHeroSocials = "featureIcons___img___heroImageHero___heroSocials",
+  FeatureIconsImgHeroImageHeroId = "featureIcons___img___heroImageHero___id",
+  FeatureIconsImgHeroImageHeroPublishedAt = "featureIcons___img___heroImageHero___publishedAt",
+  FeatureIconsImgHeroImageHeroRemoteId = "featureIcons___img___heroImageHero___remoteId",
+  FeatureIconsImgHeroImageHeroRemoteTypeName = "featureIcons___img___heroImageHero___remoteTypeName",
+  FeatureIconsImgHeroImageHeroStage = "featureIcons___img___heroImageHero___stage",
+  FeatureIconsImgHeroImageHeroSubtitle = "featureIcons___img___heroImageHero___subtitle",
+  FeatureIconsImgHeroImageHeroTitle = "featureIcons___img___heroImageHero___title",
+  FeatureIconsImgHeroImageHeroUpdatedAt = "featureIcons___img___heroImageHero___updatedAt",
+  FeatureIconsImgId = "featureIcons___img___id",
+  FeatureIconsImgInternalContent = "featureIcons___img___internal___content",
+  FeatureIconsImgInternalContentDigest = "featureIcons___img___internal___contentDigest",
+  FeatureIconsImgInternalDescription = "featureIcons___img___internal___description",
+  FeatureIconsImgInternalFieldOwners = "featureIcons___img___internal___fieldOwners",
+  FeatureIconsImgInternalIgnoreType = "featureIcons___img___internal___ignoreType",
+  FeatureIconsImgInternalMediaType = "featureIcons___img___internal___mediaType",
+  FeatureIconsImgInternalOwner = "featureIcons___img___internal___owner",
+  FeatureIconsImgInternalType = "featureIcons___img___internal___type",
+  FeatureIconsImgLocale = "featureIcons___img___locale",
+  FeatureIconsImgMimeType = "featureIcons___img___mimeType",
+  FeatureIconsImgParentChildren = "featureIcons___img___parent___children",
+  FeatureIconsImgParentId = "featureIcons___img___parent___id",
+  FeatureIconsImgPublishedAt = "featureIcons___img___publishedAt",
+  FeatureIconsImgPublishedByChildren = "featureIcons___img___publishedBy___children",
+  FeatureIconsImgPublishedByCreatedAt = "featureIcons___img___publishedBy___createdAt",
+  FeatureIconsImgPublishedById = "featureIcons___img___publishedBy___id",
+  FeatureIconsImgPublishedByIsActive = "featureIcons___img___publishedBy___isActive",
+  FeatureIconsImgPublishedByKind = "featureIcons___img___publishedBy___kind",
+  FeatureIconsImgPublishedByName = "featureIcons___img___publishedBy___name",
+  FeatureIconsImgPublishedByPicture = "featureIcons___img___publishedBy___picture",
+  FeatureIconsImgPublishedByPublishedAt = "featureIcons___img___publishedBy___publishedAt",
+  FeatureIconsImgPublishedByRemoteId = "featureIcons___img___publishedBy___remoteId",
+  FeatureIconsImgPublishedByRemoteTypeName = "featureIcons___img___publishedBy___remoteTypeName",
+  FeatureIconsImgPublishedByStage = "featureIcons___img___publishedBy___stage",
+  FeatureIconsImgPublishedByUpdatedAt = "featureIcons___img___publishedBy___updatedAt",
+  FeatureIconsImgRemoteId = "featureIcons___img___remoteId",
+  FeatureIconsImgRemoteTypeName = "featureIcons___img___remoteTypeName",
+  FeatureIconsImgSize = "featureIcons___img___size",
+  FeatureIconsImgStage = "featureIcons___img___stage",
+  FeatureIconsImgUpdatedAt = "featureIcons___img___updatedAt",
+  FeatureIconsImgUpdatedByChildren = "featureIcons___img___updatedBy___children",
+  FeatureIconsImgUpdatedByCreatedAt = "featureIcons___img___updatedBy___createdAt",
+  FeatureIconsImgUpdatedById = "featureIcons___img___updatedBy___id",
+  FeatureIconsImgUpdatedByIsActive = "featureIcons___img___updatedBy___isActive",
+  FeatureIconsImgUpdatedByKind = "featureIcons___img___updatedBy___kind",
+  FeatureIconsImgUpdatedByName = "featureIcons___img___updatedBy___name",
+  FeatureIconsImgUpdatedByPicture = "featureIcons___img___updatedBy___picture",
+  FeatureIconsImgUpdatedByPublishedAt = "featureIcons___img___updatedBy___publishedAt",
+  FeatureIconsImgUpdatedByRemoteId = "featureIcons___img___updatedBy___remoteId",
+  FeatureIconsImgUpdatedByRemoteTypeName = "featureIcons___img___updatedBy___remoteTypeName",
+  FeatureIconsImgUpdatedByStage = "featureIcons___img___updatedBy___stage",
+  FeatureIconsImgUpdatedByUpdatedAt = "featureIcons___img___updatedBy___updatedAt",
+  FeatureIconsImgUrl = "featureIcons___img___url",
+  FeatureIconsImgWidth = "featureIcons___img___width",
+  FeatureIconsInternalContent = "featureIcons___internal___content",
+  FeatureIconsInternalContentDigest = "featureIcons___internal___contentDigest",
+  FeatureIconsInternalDescription = "featureIcons___internal___description",
+  FeatureIconsInternalFieldOwners = "featureIcons___internal___fieldOwners",
+  FeatureIconsInternalIgnoreType = "featureIcons___internal___ignoreType",
+  FeatureIconsInternalMediaType = "featureIcons___internal___mediaType",
+  FeatureIconsInternalOwner = "featureIcons___internal___owner",
+  FeatureIconsInternalType = "featureIcons___internal___type",
+  FeatureIconsParentChildren = "featureIcons___parent___children",
+  FeatureIconsParentChildrenChildren = "featureIcons___parent___children___children",
+  FeatureIconsParentChildrenId = "featureIcons___parent___children___id",
+  FeatureIconsParentId = "featureIcons___parent___id",
+  FeatureIconsParentInternalContent = "featureIcons___parent___internal___content",
+  FeatureIconsParentInternalContentDigest = "featureIcons___parent___internal___contentDigest",
+  FeatureIconsParentInternalDescription = "featureIcons___parent___internal___description",
+  FeatureIconsParentInternalFieldOwners = "featureIcons___parent___internal___fieldOwners",
+  FeatureIconsParentInternalIgnoreType = "featureIcons___parent___internal___ignoreType",
+  FeatureIconsParentInternalMediaType = "featureIcons___parent___internal___mediaType",
+  FeatureIconsParentInternalOwner = "featureIcons___parent___internal___owner",
+  FeatureIconsParentInternalType = "featureIcons___parent___internal___type",
+  FeatureIconsParentParentChildren = "featureIcons___parent___parent___children",
+  FeatureIconsParentParentId = "featureIcons___parent___parent___id",
+  FeatureIconsPublishedAt = "featureIcons___publishedAt",
+  FeatureIconsPublishedByChildren = "featureIcons___publishedBy___children",
+  FeatureIconsPublishedByChildrenChildren = "featureIcons___publishedBy___children___children",
+  FeatureIconsPublishedByChildrenId = "featureIcons___publishedBy___children___id",
+  FeatureIconsPublishedByCreatedAt = "featureIcons___publishedBy___createdAt",
+  FeatureIconsPublishedById = "featureIcons___publishedBy___id",
+  FeatureIconsPublishedByInternalContent = "featureIcons___publishedBy___internal___content",
+  FeatureIconsPublishedByInternalContentDigest = "featureIcons___publishedBy___internal___contentDigest",
+  FeatureIconsPublishedByInternalDescription = "featureIcons___publishedBy___internal___description",
+  FeatureIconsPublishedByInternalFieldOwners = "featureIcons___publishedBy___internal___fieldOwners",
+  FeatureIconsPublishedByInternalIgnoreType = "featureIcons___publishedBy___internal___ignoreType",
+  FeatureIconsPublishedByInternalMediaType = "featureIcons___publishedBy___internal___mediaType",
+  FeatureIconsPublishedByInternalOwner = "featureIcons___publishedBy___internal___owner",
+  FeatureIconsPublishedByInternalType = "featureIcons___publishedBy___internal___type",
+  FeatureIconsPublishedByIsActive = "featureIcons___publishedBy___isActive",
+  FeatureIconsPublishedByKind = "featureIcons___publishedBy___kind",
+  FeatureIconsPublishedByName = "featureIcons___publishedBy___name",
+  FeatureIconsPublishedByParentChildren = "featureIcons___publishedBy___parent___children",
+  FeatureIconsPublishedByParentId = "featureIcons___publishedBy___parent___id",
+  FeatureIconsPublishedByPicture = "featureIcons___publishedBy___picture",
+  FeatureIconsPublishedByPublishedAt = "featureIcons___publishedBy___publishedAt",
+  FeatureIconsPublishedByRemoteId = "featureIcons___publishedBy___remoteId",
+  FeatureIconsPublishedByRemoteTypeName = "featureIcons___publishedBy___remoteTypeName",
+  FeatureIconsPublishedByStage = "featureIcons___publishedBy___stage",
+  FeatureIconsPublishedByUpdatedAt = "featureIcons___publishedBy___updatedAt",
+  FeatureIconsRemoteId = "featureIcons___remoteId",
+  FeatureIconsRemoteTypeName = "featureIcons___remoteTypeName",
+  FeatureIconsStage = "featureIcons___stage",
+  FeatureIconsUpdatedAt = "featureIcons___updatedAt",
+  FeatureIconsUpdatedByChildren = "featureIcons___updatedBy___children",
+  FeatureIconsUpdatedByChildrenChildren = "featureIcons___updatedBy___children___children",
+  FeatureIconsUpdatedByChildrenId = "featureIcons___updatedBy___children___id",
+  FeatureIconsUpdatedByCreatedAt = "featureIcons___updatedBy___createdAt",
+  FeatureIconsUpdatedById = "featureIcons___updatedBy___id",
+  FeatureIconsUpdatedByInternalContent = "featureIcons___updatedBy___internal___content",
+  FeatureIconsUpdatedByInternalContentDigest = "featureIcons___updatedBy___internal___contentDigest",
+  FeatureIconsUpdatedByInternalDescription = "featureIcons___updatedBy___internal___description",
+  FeatureIconsUpdatedByInternalFieldOwners = "featureIcons___updatedBy___internal___fieldOwners",
+  FeatureIconsUpdatedByInternalIgnoreType = "featureIcons___updatedBy___internal___ignoreType",
+  FeatureIconsUpdatedByInternalMediaType = "featureIcons___updatedBy___internal___mediaType",
+  FeatureIconsUpdatedByInternalOwner = "featureIcons___updatedBy___internal___owner",
+  FeatureIconsUpdatedByInternalType = "featureIcons___updatedBy___internal___type",
+  FeatureIconsUpdatedByIsActive = "featureIcons___updatedBy___isActive",
+  FeatureIconsUpdatedByKind = "featureIcons___updatedBy___kind",
+  FeatureIconsUpdatedByName = "featureIcons___updatedBy___name",
+  FeatureIconsUpdatedByParentChildren = "featureIcons___updatedBy___parent___children",
+  FeatureIconsUpdatedByParentId = "featureIcons___updatedBy___parent___id",
+  FeatureIconsUpdatedByPicture = "featureIcons___updatedBy___picture",
+  FeatureIconsUpdatedByPublishedAt = "featureIcons___updatedBy___publishedAt",
+  FeatureIconsUpdatedByRemoteId = "featureIcons___updatedBy___remoteId",
+  FeatureIconsUpdatedByRemoteTypeName = "featureIcons___updatedBy___remoteTypeName",
+  FeatureIconsUpdatedByStage = "featureIcons___updatedBy___stage",
+  FeatureIconsUpdatedByUpdatedAt = "featureIcons___updatedBy___updatedAt",
+  Id = "id",
+  InternalContent = "internal___content",
+  InternalContentDigest = "internal___contentDigest",
+  InternalDescription = "internal___description",
+  InternalFieldOwners = "internal___fieldOwners",
+  InternalIgnoreType = "internal___ignoreType",
+  InternalMediaType = "internal___mediaType",
+  InternalOwner = "internal___owner",
+  InternalType = "internal___type",
+  ParentChildren = "parent___children",
+  ParentChildrenChildren = "parent___children___children",
+  ParentChildrenChildrenChildren = "parent___children___children___children",
+  ParentChildrenChildrenId = "parent___children___children___id",
+  ParentChildrenId = "parent___children___id",
+  ParentChildrenInternalContent = "parent___children___internal___content",
+  ParentChildrenInternalContentDigest = "parent___children___internal___contentDigest",
+  ParentChildrenInternalDescription = "parent___children___internal___description",
+  ParentChildrenInternalFieldOwners = "parent___children___internal___fieldOwners",
+  ParentChildrenInternalIgnoreType = "parent___children___internal___ignoreType",
+  ParentChildrenInternalMediaType = "parent___children___internal___mediaType",
+  ParentChildrenInternalOwner = "parent___children___internal___owner",
+  ParentChildrenInternalType = "parent___children___internal___type",
+  ParentChildrenParentChildren = "parent___children___parent___children",
+  ParentChildrenParentId = "parent___children___parent___id",
+  ParentId = "parent___id",
+  ParentInternalContent = "parent___internal___content",
+  ParentInternalContentDigest = "parent___internal___contentDigest",
+  ParentInternalDescription = "parent___internal___description",
+  ParentInternalFieldOwners = "parent___internal___fieldOwners",
+  ParentInternalIgnoreType = "parent___internal___ignoreType",
+  ParentInternalMediaType = "parent___internal___mediaType",
+  ParentInternalOwner = "parent___internal___owner",
+  ParentInternalType = "parent___internal___type",
+  ParentParentChildren = "parent___parent___children",
+  ParentParentChildrenChildren = "parent___parent___children___children",
+  ParentParentChildrenId = "parent___parent___children___id",
+  ParentParentId = "parent___parent___id",
+  ParentParentInternalContent = "parent___parent___internal___content",
+  ParentParentInternalContentDigest = "parent___parent___internal___contentDigest",
+  ParentParentInternalDescription = "parent___parent___internal___description",
+  ParentParentInternalFieldOwners = "parent___parent___internal___fieldOwners",
+  ParentParentInternalIgnoreType = "parent___parent___internal___ignoreType",
+  ParentParentInternalMediaType = "parent___parent___internal___mediaType",
+  ParentParentInternalOwner = "parent___parent___internal___owner",
+  ParentParentInternalType = "parent___parent___internal___type",
+  ParentParentParentChildren = "parent___parent___parent___children",
+  ParentParentParentId = "parent___parent___parent___id",
+  PublishedAt = "publishedAt",
+  PublishedByChildren = "publishedBy___children",
+  PublishedByChildrenChildren = "publishedBy___children___children",
+  PublishedByChildrenChildrenChildren = "publishedBy___children___children___children",
+  PublishedByChildrenChildrenId = "publishedBy___children___children___id",
+  PublishedByChildrenId = "publishedBy___children___id",
+  PublishedByChildrenInternalContent = "publishedBy___children___internal___content",
+  PublishedByChildrenInternalContentDigest = "publishedBy___children___internal___contentDigest",
+  PublishedByChildrenInternalDescription = "publishedBy___children___internal___description",
+  PublishedByChildrenInternalFieldOwners = "publishedBy___children___internal___fieldOwners",
+  PublishedByChildrenInternalIgnoreType = "publishedBy___children___internal___ignoreType",
+  PublishedByChildrenInternalMediaType = "publishedBy___children___internal___mediaType",
+  PublishedByChildrenInternalOwner = "publishedBy___children___internal___owner",
+  PublishedByChildrenInternalType = "publishedBy___children___internal___type",
+  PublishedByChildrenParentChildren = "publishedBy___children___parent___children",
+  PublishedByChildrenParentId = "publishedBy___children___parent___id",
+  PublishedByCreatedAt = "publishedBy___createdAt",
+  PublishedById = "publishedBy___id",
+  PublishedByInternalContent = "publishedBy___internal___content",
+  PublishedByInternalContentDigest = "publishedBy___internal___contentDigest",
+  PublishedByInternalDescription = "publishedBy___internal___description",
+  PublishedByInternalFieldOwners = "publishedBy___internal___fieldOwners",
+  PublishedByInternalIgnoreType = "publishedBy___internal___ignoreType",
+  PublishedByInternalMediaType = "publishedBy___internal___mediaType",
+  PublishedByInternalOwner = "publishedBy___internal___owner",
+  PublishedByInternalType = "publishedBy___internal___type",
+  PublishedByIsActive = "publishedBy___isActive",
+  PublishedByKind = "publishedBy___kind",
+  PublishedByName = "publishedBy___name",
+  PublishedByParentChildren = "publishedBy___parent___children",
+  PublishedByParentChildrenChildren = "publishedBy___parent___children___children",
+  PublishedByParentChildrenId = "publishedBy___parent___children___id",
+  PublishedByParentId = "publishedBy___parent___id",
+  PublishedByParentInternalContent = "publishedBy___parent___internal___content",
+  PublishedByParentInternalContentDigest = "publishedBy___parent___internal___contentDigest",
+  PublishedByParentInternalDescription = "publishedBy___parent___internal___description",
+  PublishedByParentInternalFieldOwners = "publishedBy___parent___internal___fieldOwners",
+  PublishedByParentInternalIgnoreType = "publishedBy___parent___internal___ignoreType",
+  PublishedByParentInternalMediaType = "publishedBy___parent___internal___mediaType",
+  PublishedByParentInternalOwner = "publishedBy___parent___internal___owner",
+  PublishedByParentInternalType = "publishedBy___parent___internal___type",
+  PublishedByParentParentChildren = "publishedBy___parent___parent___children",
+  PublishedByParentParentId = "publishedBy___parent___parent___id",
+  PublishedByPicture = "publishedBy___picture",
+  PublishedByPublishedAt = "publishedBy___publishedAt",
+  PublishedByRemoteId = "publishedBy___remoteId",
+  PublishedByRemoteTypeName = "publishedBy___remoteTypeName",
+  PublishedByStage = "publishedBy___stage",
+  PublishedByUpdatedAt = "publishedBy___updatedAt",
+  RemoteId = "remoteId",
+  RemoteTypeName = "remoteTypeName",
+  Stage = "stage",
+  Title = "title",
+  UpdatedAt = "updatedAt",
+  UpdatedByChildren = "updatedBy___children",
+  UpdatedByChildrenChildren = "updatedBy___children___children",
+  UpdatedByChildrenChildrenChildren = "updatedBy___children___children___children",
+  UpdatedByChildrenChildrenId = "updatedBy___children___children___id",
+  UpdatedByChildrenId = "updatedBy___children___id",
+  UpdatedByChildrenInternalContent = "updatedBy___children___internal___content",
+  UpdatedByChildrenInternalContentDigest = "updatedBy___children___internal___contentDigest",
+  UpdatedByChildrenInternalDescription = "updatedBy___children___internal___description",
+  UpdatedByChildrenInternalFieldOwners = "updatedBy___children___internal___fieldOwners",
+  UpdatedByChildrenInternalIgnoreType = "updatedBy___children___internal___ignoreType",
+  UpdatedByChildrenInternalMediaType = "updatedBy___children___internal___mediaType",
+  UpdatedByChildrenInternalOwner = "updatedBy___children___internal___owner",
+  UpdatedByChildrenInternalType = "updatedBy___children___internal___type",
+  UpdatedByChildrenParentChildren = "updatedBy___children___parent___children",
+  UpdatedByChildrenParentId = "updatedBy___children___parent___id",
+  UpdatedByCreatedAt = "updatedBy___createdAt",
+  UpdatedById = "updatedBy___id",
+  UpdatedByInternalContent = "updatedBy___internal___content",
+  UpdatedByInternalContentDigest = "updatedBy___internal___contentDigest",
+  UpdatedByInternalDescription = "updatedBy___internal___description",
+  UpdatedByInternalFieldOwners = "updatedBy___internal___fieldOwners",
+  UpdatedByInternalIgnoreType = "updatedBy___internal___ignoreType",
+  UpdatedByInternalMediaType = "updatedBy___internal___mediaType",
+  UpdatedByInternalOwner = "updatedBy___internal___owner",
+  UpdatedByInternalType = "updatedBy___internal___type",
+  UpdatedByIsActive = "updatedBy___isActive",
+  UpdatedByKind = "updatedBy___kind",
+  UpdatedByName = "updatedBy___name",
+  UpdatedByParentChildren = "updatedBy___parent___children",
+  UpdatedByParentChildrenChildren = "updatedBy___parent___children___children",
+  UpdatedByParentChildrenId = "updatedBy___parent___children___id",
+  UpdatedByParentId = "updatedBy___parent___id",
+  UpdatedByParentInternalContent = "updatedBy___parent___internal___content",
+  UpdatedByParentInternalContentDigest = "updatedBy___parent___internal___contentDigest",
+  UpdatedByParentInternalDescription = "updatedBy___parent___internal___description",
+  UpdatedByParentInternalFieldOwners = "updatedBy___parent___internal___fieldOwners",
+  UpdatedByParentInternalIgnoreType = "updatedBy___parent___internal___ignoreType",
+  UpdatedByParentInternalMediaType = "updatedBy___parent___internal___mediaType",
+  UpdatedByParentInternalOwner = "updatedBy___parent___internal___owner",
+  UpdatedByParentInternalType = "updatedBy___parent___internal___type",
+  UpdatedByParentParentChildren = "updatedBy___parent___parent___children",
+  UpdatedByParentParentId = "updatedBy___parent___parent___id",
+  UpdatedByPicture = "updatedBy___picture",
+  UpdatedByPublishedAt = "updatedBy___publishedAt",
+  UpdatedByRemoteId = "updatedBy___remoteId",
+  UpdatedByRemoteTypeName = "updatedBy___remoteTypeName",
+  UpdatedByStage = "updatedBy___stage",
+  UpdatedByUpdatedAt = "updatedBy___updatedAt",
+}
+
+export type GraphCms_FeatureFilterInput = {
+  children?: Maybe<NodeFilterListInput>;
+  createdAt?: Maybe<JsonQueryOperatorInput>;
+  createdBy?: Maybe<GraphCms_UserFilterInput>;
+  desc?: Maybe<StringQueryOperatorInput>;
+  featureIcons?: Maybe<GraphCms_FeatureIconFilterListInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  internal?: Maybe<InternalFilterInput>;
+  parent?: Maybe<NodeFilterInput>;
+  publishedAt?: Maybe<JsonQueryOperatorInput>;
+  publishedBy?: Maybe<GraphCms_UserFilterInput>;
+  remoteId?: Maybe<IdQueryOperatorInput>;
+  remoteTypeName?: Maybe<StringQueryOperatorInput>;
+  stage?: Maybe<GraphCms_StageQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  updatedAt?: Maybe<JsonQueryOperatorInput>;
+  updatedBy?: Maybe<GraphCms_UserFilterInput>;
+};
+
+export type GraphCms_FeatureGroupConnection = {
+  distinct: Array<Scalars["String"]>;
+  edges: Array<GraphCms_FeatureEdge>;
+  field: Scalars["String"];
+  fieldValue?: Maybe<Scalars["String"]>;
+  group: Array<GraphCms_FeatureGroupConnection>;
+  max?: Maybe<Scalars["Float"]>;
+  min?: Maybe<Scalars["Float"]>;
+  nodes: Array<GraphCms_Feature>;
+  pageInfo: PageInfo;
+  sum?: Maybe<Scalars["Float"]>;
+  totalCount: Scalars["Int"];
+};
+
+export type GraphCms_FeatureGroupConnectionDistinctArgs = {
+  field: GraphCms_FeatureFieldsEnum;
+};
+
+export type GraphCms_FeatureGroupConnectionGroupArgs = {
+  field: GraphCms_FeatureFieldsEnum;
+  limit?: Maybe<Scalars["Int"]>;
+  skip?: Maybe<Scalars["Int"]>;
+};
+
+export type GraphCms_FeatureGroupConnectionMaxArgs = {
+  field: GraphCms_FeatureFieldsEnum;
+};
+
+export type GraphCms_FeatureGroupConnectionMinArgs = {
+  field: GraphCms_FeatureFieldsEnum;
+};
+
+export type GraphCms_FeatureGroupConnectionSumArgs = {
+  field: GraphCms_FeatureFieldsEnum;
+};
+
+export type GraphCms_FeatureIcon = Node & {
+  children: Array<Node>;
+  createdAt: Scalars["JSON"];
+  createdBy?: Maybe<GraphCms_User>;
+  featDesc?: Maybe<Scalars["String"]>;
+  featTitle?: Maybe<Scalars["String"]>;
+  id: Scalars["ID"];
+  img?: Maybe<GraphCms_Asset>;
+  internal: Internal;
+  parent?: Maybe<Node>;
+  publishedAt?: Maybe<Scalars["JSON"]>;
+  publishedBy?: Maybe<GraphCms_User>;
+  remoteId: Scalars["ID"];
+  remoteTypeName: Scalars["String"];
+  stage: GraphCms_Stage;
+  updatedAt: Scalars["JSON"];
+  updatedBy?: Maybe<GraphCms_User>;
+};
+
+export type GraphCms_FeatureIconConnection = {
+  distinct: Array<Scalars["String"]>;
+  edges: Array<GraphCms_FeatureIconEdge>;
+  group: Array<GraphCms_FeatureIconGroupConnection>;
+  max?: Maybe<Scalars["Float"]>;
+  min?: Maybe<Scalars["Float"]>;
+  nodes: Array<GraphCms_FeatureIcon>;
+  pageInfo: PageInfo;
+  sum?: Maybe<Scalars["Float"]>;
+  totalCount: Scalars["Int"];
+};
+
+export type GraphCms_FeatureIconConnectionDistinctArgs = {
+  field: GraphCms_FeatureIconFieldsEnum;
+};
+
+export type GraphCms_FeatureIconConnectionGroupArgs = {
+  field: GraphCms_FeatureIconFieldsEnum;
+  limit?: Maybe<Scalars["Int"]>;
+  skip?: Maybe<Scalars["Int"]>;
+};
+
+export type GraphCms_FeatureIconConnectionMaxArgs = {
+  field: GraphCms_FeatureIconFieldsEnum;
+};
+
+export type GraphCms_FeatureIconConnectionMinArgs = {
+  field: GraphCms_FeatureIconFieldsEnum;
+};
+
+export type GraphCms_FeatureIconConnectionSumArgs = {
+  field: GraphCms_FeatureIconFieldsEnum;
+};
+
+export type GraphCms_FeatureIconEdge = {
+  next?: Maybe<GraphCms_FeatureIcon>;
+  node: GraphCms_FeatureIcon;
+  previous?: Maybe<GraphCms_FeatureIcon>;
+};
+
+export enum GraphCms_FeatureIconFieldsEnum {
+  Children = "children",
+  ChildrenChildren = "children___children",
+  ChildrenChildrenChildren = "children___children___children",
+  ChildrenChildrenChildrenChildren = "children___children___children___children",
+  ChildrenChildrenChildrenId = "children___children___children___id",
+  ChildrenChildrenId = "children___children___id",
+  ChildrenChildrenInternalContent = "children___children___internal___content",
+  ChildrenChildrenInternalContentDigest = "children___children___internal___contentDigest",
+  ChildrenChildrenInternalDescription = "children___children___internal___description",
+  ChildrenChildrenInternalFieldOwners = "children___children___internal___fieldOwners",
+  ChildrenChildrenInternalIgnoreType = "children___children___internal___ignoreType",
+  ChildrenChildrenInternalMediaType = "children___children___internal___mediaType",
+  ChildrenChildrenInternalOwner = "children___children___internal___owner",
+  ChildrenChildrenInternalType = "children___children___internal___type",
+  ChildrenChildrenParentChildren = "children___children___parent___children",
+  ChildrenChildrenParentId = "children___children___parent___id",
+  ChildrenId = "children___id",
+  ChildrenInternalContent = "children___internal___content",
+  ChildrenInternalContentDigest = "children___internal___contentDigest",
+  ChildrenInternalDescription = "children___internal___description",
+  ChildrenInternalFieldOwners = "children___internal___fieldOwners",
+  ChildrenInternalIgnoreType = "children___internal___ignoreType",
+  ChildrenInternalMediaType = "children___internal___mediaType",
+  ChildrenInternalOwner = "children___internal___owner",
+  ChildrenInternalType = "children___internal___type",
+  ChildrenParentChildren = "children___parent___children",
+  ChildrenParentChildrenChildren = "children___parent___children___children",
+  ChildrenParentChildrenId = "children___parent___children___id",
+  ChildrenParentId = "children___parent___id",
+  ChildrenParentInternalContent = "children___parent___internal___content",
+  ChildrenParentInternalContentDigest = "children___parent___internal___contentDigest",
+  ChildrenParentInternalDescription = "children___parent___internal___description",
+  ChildrenParentInternalFieldOwners = "children___parent___internal___fieldOwners",
+  ChildrenParentInternalIgnoreType = "children___parent___internal___ignoreType",
+  ChildrenParentInternalMediaType = "children___parent___internal___mediaType",
+  ChildrenParentInternalOwner = "children___parent___internal___owner",
+  ChildrenParentInternalType = "children___parent___internal___type",
+  ChildrenParentParentChildren = "children___parent___parent___children",
+  ChildrenParentParentId = "children___parent___parent___id",
+  CreatedAt = "createdAt",
+  CreatedByChildren = "createdBy___children",
+  CreatedByChildrenChildren = "createdBy___children___children",
+  CreatedByChildrenChildrenChildren = "createdBy___children___children___children",
+  CreatedByChildrenChildrenId = "createdBy___children___children___id",
+  CreatedByChildrenId = "createdBy___children___id",
+  CreatedByChildrenInternalContent = "createdBy___children___internal___content",
+  CreatedByChildrenInternalContentDigest = "createdBy___children___internal___contentDigest",
+  CreatedByChildrenInternalDescription = "createdBy___children___internal___description",
+  CreatedByChildrenInternalFieldOwners = "createdBy___children___internal___fieldOwners",
+  CreatedByChildrenInternalIgnoreType = "createdBy___children___internal___ignoreType",
+  CreatedByChildrenInternalMediaType = "createdBy___children___internal___mediaType",
+  CreatedByChildrenInternalOwner = "createdBy___children___internal___owner",
+  CreatedByChildrenInternalType = "createdBy___children___internal___type",
+  CreatedByChildrenParentChildren = "createdBy___children___parent___children",
+  CreatedByChildrenParentId = "createdBy___children___parent___id",
+  CreatedByCreatedAt = "createdBy___createdAt",
+  CreatedById = "createdBy___id",
+  CreatedByInternalContent = "createdBy___internal___content",
+  CreatedByInternalContentDigest = "createdBy___internal___contentDigest",
+  CreatedByInternalDescription = "createdBy___internal___description",
+  CreatedByInternalFieldOwners = "createdBy___internal___fieldOwners",
+  CreatedByInternalIgnoreType = "createdBy___internal___ignoreType",
+  CreatedByInternalMediaType = "createdBy___internal___mediaType",
+  CreatedByInternalOwner = "createdBy___internal___owner",
+  CreatedByInternalType = "createdBy___internal___type",
+  CreatedByIsActive = "createdBy___isActive",
+  CreatedByKind = "createdBy___kind",
+  CreatedByName = "createdBy___name",
+  CreatedByParentChildren = "createdBy___parent___children",
+  CreatedByParentChildrenChildren = "createdBy___parent___children___children",
+  CreatedByParentChildrenId = "createdBy___parent___children___id",
+  CreatedByParentId = "createdBy___parent___id",
+  CreatedByParentInternalContent = "createdBy___parent___internal___content",
+  CreatedByParentInternalContentDigest = "createdBy___parent___internal___contentDigest",
+  CreatedByParentInternalDescription = "createdBy___parent___internal___description",
+  CreatedByParentInternalFieldOwners = "createdBy___parent___internal___fieldOwners",
+  CreatedByParentInternalIgnoreType = "createdBy___parent___internal___ignoreType",
+  CreatedByParentInternalMediaType = "createdBy___parent___internal___mediaType",
+  CreatedByParentInternalOwner = "createdBy___parent___internal___owner",
+  CreatedByParentInternalType = "createdBy___parent___internal___type",
+  CreatedByParentParentChildren = "createdBy___parent___parent___children",
+  CreatedByParentParentId = "createdBy___parent___parent___id",
+  CreatedByPicture = "createdBy___picture",
+  CreatedByPublishedAt = "createdBy___publishedAt",
+  CreatedByRemoteId = "createdBy___remoteId",
+  CreatedByRemoteTypeName = "createdBy___remoteTypeName",
+  CreatedByStage = "createdBy___stage",
+  CreatedByUpdatedAt = "createdBy___updatedAt",
+  FeatDesc = "featDesc",
+  FeatTitle = "featTitle",
+  Id = "id",
+  ImgChildren = "img___children",
+  ImgChildrenChildren = "img___children___children",
+  ImgChildrenChildrenChildren = "img___children___children___children",
+  ImgChildrenChildrenId = "img___children___children___id",
+  ImgChildrenId = "img___children___id",
+  ImgChildrenInternalContent = "img___children___internal___content",
+  ImgChildrenInternalContentDigest = "img___children___internal___contentDigest",
+  ImgChildrenInternalDescription = "img___children___internal___description",
+  ImgChildrenInternalFieldOwners = "img___children___internal___fieldOwners",
+  ImgChildrenInternalIgnoreType = "img___children___internal___ignoreType",
+  ImgChildrenInternalMediaType = "img___children___internal___mediaType",
+  ImgChildrenInternalOwner = "img___children___internal___owner",
+  ImgChildrenInternalType = "img___children___internal___type",
+  ImgChildrenParentChildren = "img___children___parent___children",
+  ImgChildrenParentId = "img___children___parent___id",
+  ImgCreatedAt = "img___createdAt",
+  ImgCreatedByChildren = "img___createdBy___children",
+  ImgCreatedByChildrenChildren = "img___createdBy___children___children",
+  ImgCreatedByChildrenId = "img___createdBy___children___id",
+  ImgCreatedByCreatedAt = "img___createdBy___createdAt",
+  ImgCreatedById = "img___createdBy___id",
+  ImgCreatedByInternalContent = "img___createdBy___internal___content",
+  ImgCreatedByInternalContentDigest = "img___createdBy___internal___contentDigest",
+  ImgCreatedByInternalDescription = "img___createdBy___internal___description",
+  ImgCreatedByInternalFieldOwners = "img___createdBy___internal___fieldOwners",
+  ImgCreatedByInternalIgnoreType = "img___createdBy___internal___ignoreType",
+  ImgCreatedByInternalMediaType = "img___createdBy___internal___mediaType",
+  ImgCreatedByInternalOwner = "img___createdBy___internal___owner",
+  ImgCreatedByInternalType = "img___createdBy___internal___type",
+  ImgCreatedByIsActive = "img___createdBy___isActive",
+  ImgCreatedByKind = "img___createdBy___kind",
+  ImgCreatedByName = "img___createdBy___name",
+  ImgCreatedByParentChildren = "img___createdBy___parent___children",
+  ImgCreatedByParentId = "img___createdBy___parent___id",
+  ImgCreatedByPicture = "img___createdBy___picture",
+  ImgCreatedByPublishedAt = "img___createdBy___publishedAt",
+  ImgCreatedByRemoteId = "img___createdBy___remoteId",
+  ImgCreatedByRemoteTypeName = "img___createdBy___remoteTypeName",
+  ImgCreatedByStage = "img___createdBy___stage",
+  ImgCreatedByUpdatedAt = "img___createdBy___updatedAt",
+  ImgFileName = "img___fileName",
+  ImgHandle = "img___handle",
+  ImgHeight = "img___height",
+  ImgHeroCustomerImgHeroCustomer = "img___heroCustomerImgHeroCustomer",
+  ImgHeroCustomerImgHeroCustomerAlt = "img___heroCustomerImgHeroCustomer___alt",
+  ImgHeroCustomerImgHeroCustomerChildren = "img___heroCustomerImgHeroCustomer___children",
+  ImgHeroCustomerImgHeroCustomerChildrenChildren = "img___heroCustomerImgHeroCustomer___children___children",
+  ImgHeroCustomerImgHeroCustomerChildrenId = "img___heroCustomerImgHeroCustomer___children___id",
+  ImgHeroCustomerImgHeroCustomerCreatedAt = "img___heroCustomerImgHeroCustomer___createdAt",
+  ImgHeroCustomerImgHeroCustomerCreatedByChildren = "img___heroCustomerImgHeroCustomer___createdBy___children",
+  ImgHeroCustomerImgHeroCustomerCreatedByCreatedAt = "img___heroCustomerImgHeroCustomer___createdBy___createdAt",
+  ImgHeroCustomerImgHeroCustomerCreatedById = "img___heroCustomerImgHeroCustomer___createdBy___id",
+  ImgHeroCustomerImgHeroCustomerCreatedByIsActive = "img___heroCustomerImgHeroCustomer___createdBy___isActive",
+  ImgHeroCustomerImgHeroCustomerCreatedByKind = "img___heroCustomerImgHeroCustomer___createdBy___kind",
+  ImgHeroCustomerImgHeroCustomerCreatedByName = "img___heroCustomerImgHeroCustomer___createdBy___name",
+  ImgHeroCustomerImgHeroCustomerCreatedByPicture = "img___heroCustomerImgHeroCustomer___createdBy___picture",
+  ImgHeroCustomerImgHeroCustomerCreatedByPublishedAt = "img___heroCustomerImgHeroCustomer___createdBy___publishedAt",
+  ImgHeroCustomerImgHeroCustomerCreatedByRemoteId = "img___heroCustomerImgHeroCustomer___createdBy___remoteId",
+  ImgHeroCustomerImgHeroCustomerCreatedByRemoteTypeName = "img___heroCustomerImgHeroCustomer___createdBy___remoteTypeName",
+  ImgHeroCustomerImgHeroCustomerCreatedByStage = "img___heroCustomerImgHeroCustomer___createdBy___stage",
+  ImgHeroCustomerImgHeroCustomerCreatedByUpdatedAt = "img___heroCustomerImgHeroCustomer___createdBy___updatedAt",
+  ImgHeroCustomerImgHeroCustomerHeroCustomerImgChildren = "img___heroCustomerImgHeroCustomer___heroCustomerImg___children",
+  ImgHeroCustomerImgHeroCustomerHeroCustomerImgCreatedAt = "img___heroCustomerImgHeroCustomer___heroCustomerImg___createdAt",
+  ImgHeroCustomerImgHeroCustomerHeroCustomerImgFileName = "img___heroCustomerImgHeroCustomer___heroCustomerImg___fileName",
+  ImgHeroCustomerImgHeroCustomerHeroCustomerImgHandle = "img___heroCustomerImgHeroCustomer___heroCustomerImg___handle",
+  ImgHeroCustomerImgHeroCustomerHeroCustomerImgHeight = "img___heroCustomerImgHeroCustomer___heroCustomerImg___height",
+  ImgHeroCustomerImgHeroCustomerHeroCustomerImgHeroCustomerImgHeroCustomer = "img___heroCustomerImgHeroCustomer___heroCustomerImg___heroCustomerImgHeroCustomer",
+  ImgHeroCustomerImgHeroCustomerHeroCustomerImgHeroImageHero = "img___heroCustomerImgHeroCustomer___heroCustomerImg___heroImageHero",
+  ImgHeroCustomerImgHeroCustomerHeroCustomerImgId = "img___heroCustomerImgHeroCustomer___heroCustomerImg___id",
+  ImgHeroCustomerImgHeroCustomerHeroCustomerImgLocale = "img___heroCustomerImgHeroCustomer___heroCustomerImg___locale",
+  ImgHeroCustomerImgHeroCustomerHeroCustomerImgMimeType = "img___heroCustomerImgHeroCustomer___heroCustomerImg___mimeType",
+  ImgHeroCustomerImgHeroCustomerHeroCustomerImgPublishedAt = "img___heroCustomerImgHeroCustomer___heroCustomerImg___publishedAt",
+  ImgHeroCustomerImgHeroCustomerHeroCustomerImgRemoteId = "img___heroCustomerImgHeroCustomer___heroCustomerImg___remoteId",
+  ImgHeroCustomerImgHeroCustomerHeroCustomerImgRemoteTypeName = "img___heroCustomerImgHeroCustomer___heroCustomerImg___remoteTypeName",
+  ImgHeroCustomerImgHeroCustomerHeroCustomerImgSize = "img___heroCustomerImgHeroCustomer___heroCustomerImg___size",
+  ImgHeroCustomerImgHeroCustomerHeroCustomerImgStage = "img___heroCustomerImgHeroCustomer___heroCustomerImg___stage",
+  ImgHeroCustomerImgHeroCustomerHeroCustomerImgUpdatedAt = "img___heroCustomerImgHeroCustomer___heroCustomerImg___updatedAt",
+  ImgHeroCustomerImgHeroCustomerHeroCustomerImgUrl = "img___heroCustomerImgHeroCustomer___heroCustomerImg___url",
+  ImgHeroCustomerImgHeroCustomerHeroCustomerImgWidth = "img___heroCustomerImgHeroCustomer___heroCustomerImg___width",
+  ImgHeroCustomerImgHeroCustomerId = "img___heroCustomerImgHeroCustomer___id",
+  ImgHeroCustomerImgHeroCustomerInternalContent = "img___heroCustomerImgHeroCustomer___internal___content",
+  ImgHeroCustomerImgHeroCustomerInternalContentDigest = "img___heroCustomerImgHeroCustomer___internal___contentDigest",
+  ImgHeroCustomerImgHeroCustomerInternalDescription = "img___heroCustomerImgHeroCustomer___internal___description",
+  ImgHeroCustomerImgHeroCustomerInternalFieldOwners = "img___heroCustomerImgHeroCustomer___internal___fieldOwners",
+  ImgHeroCustomerImgHeroCustomerInternalIgnoreType = "img___heroCustomerImgHeroCustomer___internal___ignoreType",
+  ImgHeroCustomerImgHeroCustomerInternalMediaType = "img___heroCustomerImgHeroCustomer___internal___mediaType",
+  ImgHeroCustomerImgHeroCustomerInternalOwner = "img___heroCustomerImgHeroCustomer___internal___owner",
+  ImgHeroCustomerImgHeroCustomerInternalType = "img___heroCustomerImgHeroCustomer___internal___type",
+  ImgHeroCustomerImgHeroCustomerParentChildren = "img___heroCustomerImgHeroCustomer___parent___children",
+  ImgHeroCustomerImgHeroCustomerParentId = "img___heroCustomerImgHeroCustomer___parent___id",
+  ImgHeroCustomerImgHeroCustomerPublishedAt = "img___heroCustomerImgHeroCustomer___publishedAt",
+  ImgHeroCustomerImgHeroCustomerPublishedByChildren = "img___heroCustomerImgHeroCustomer___publishedBy___children",
+  ImgHeroCustomerImgHeroCustomerPublishedByCreatedAt = "img___heroCustomerImgHeroCustomer___publishedBy___createdAt",
+  ImgHeroCustomerImgHeroCustomerPublishedById = "img___heroCustomerImgHeroCustomer___publishedBy___id",
+  ImgHeroCustomerImgHeroCustomerPublishedByIsActive = "img___heroCustomerImgHeroCustomer___publishedBy___isActive",
+  ImgHeroCustomerImgHeroCustomerPublishedByKind = "img___heroCustomerImgHeroCustomer___publishedBy___kind",
+  ImgHeroCustomerImgHeroCustomerPublishedByName = "img___heroCustomerImgHeroCustomer___publishedBy___name",
+  ImgHeroCustomerImgHeroCustomerPublishedByPicture = "img___heroCustomerImgHeroCustomer___publishedBy___picture",
+  ImgHeroCustomerImgHeroCustomerPublishedByPublishedAt = "img___heroCustomerImgHeroCustomer___publishedBy___publishedAt",
+  ImgHeroCustomerImgHeroCustomerPublishedByRemoteId = "img___heroCustomerImgHeroCustomer___publishedBy___remoteId",
+  ImgHeroCustomerImgHeroCustomerPublishedByRemoteTypeName = "img___heroCustomerImgHeroCustomer___publishedBy___remoteTypeName",
+  ImgHeroCustomerImgHeroCustomerPublishedByStage = "img___heroCustomerImgHeroCustomer___publishedBy___stage",
+  ImgHeroCustomerImgHeroCustomerPublishedByUpdatedAt = "img___heroCustomerImgHeroCustomer___publishedBy___updatedAt",
+  ImgHeroCustomerImgHeroCustomerRemoteId = "img___heroCustomerImgHeroCustomer___remoteId",
+  ImgHeroCustomerImgHeroCustomerRemoteTypeName = "img___heroCustomerImgHeroCustomer___remoteTypeName",
+  ImgHeroCustomerImgHeroCustomerStage = "img___heroCustomerImgHeroCustomer___stage",
+  ImgHeroCustomerImgHeroCustomerUpdatedAt = "img___heroCustomerImgHeroCustomer___updatedAt",
+  ImgHeroCustomerImgHeroCustomerUpdatedByChildren = "img___heroCustomerImgHeroCustomer___updatedBy___children",
+  ImgHeroCustomerImgHeroCustomerUpdatedByCreatedAt = "img___heroCustomerImgHeroCustomer___updatedBy___createdAt",
+  ImgHeroCustomerImgHeroCustomerUpdatedById = "img___heroCustomerImgHeroCustomer___updatedBy___id",
+  ImgHeroCustomerImgHeroCustomerUpdatedByIsActive = "img___heroCustomerImgHeroCustomer___updatedBy___isActive",
+  ImgHeroCustomerImgHeroCustomerUpdatedByKind = "img___heroCustomerImgHeroCustomer___updatedBy___kind",
+  ImgHeroCustomerImgHeroCustomerUpdatedByName = "img___heroCustomerImgHeroCustomer___updatedBy___name",
+  ImgHeroCustomerImgHeroCustomerUpdatedByPicture = "img___heroCustomerImgHeroCustomer___updatedBy___picture",
+  ImgHeroCustomerImgHeroCustomerUpdatedByPublishedAt = "img___heroCustomerImgHeroCustomer___updatedBy___publishedAt",
+  ImgHeroCustomerImgHeroCustomerUpdatedByRemoteId = "img___heroCustomerImgHeroCustomer___updatedBy___remoteId",
+  ImgHeroCustomerImgHeroCustomerUpdatedByRemoteTypeName = "img___heroCustomerImgHeroCustomer___updatedBy___remoteTypeName",
+  ImgHeroCustomerImgHeroCustomerUpdatedByStage = "img___heroCustomerImgHeroCustomer___updatedBy___stage",
+  ImgHeroCustomerImgHeroCustomerUpdatedByUpdatedAt = "img___heroCustomerImgHeroCustomer___updatedBy___updatedAt",
+  ImgHeroImageHero = "img___heroImageHero",
+  ImgHeroImageHeroChildren = "img___heroImageHero___children",
+  ImgHeroImageHeroChildrenChildren = "img___heroImageHero___children___children",
+  ImgHeroImageHeroChildrenId = "img___heroImageHero___children___id",
+  ImgHeroImageHeroCreatedAt = "img___heroImageHero___createdAt",
+  ImgHeroImageHeroCreatedByChildren = "img___heroImageHero___createdBy___children",
+  ImgHeroImageHeroCreatedByCreatedAt = "img___heroImageHero___createdBy___createdAt",
+  ImgHeroImageHeroCreatedById = "img___heroImageHero___createdBy___id",
+  ImgHeroImageHeroCreatedByIsActive = "img___heroImageHero___createdBy___isActive",
+  ImgHeroImageHeroCreatedByKind = "img___heroImageHero___createdBy___kind",
+  ImgHeroImageHeroCreatedByName = "img___heroImageHero___createdBy___name",
+  ImgHeroImageHeroCreatedByPicture = "img___heroImageHero___createdBy___picture",
+  ImgHeroImageHeroCreatedByPublishedAt = "img___heroImageHero___createdBy___publishedAt",
+  ImgHeroImageHeroCreatedByRemoteId = "img___heroImageHero___createdBy___remoteId",
+  ImgHeroImageHeroCreatedByRemoteTypeName = "img___heroImageHero___createdBy___remoteTypeName",
+  ImgHeroImageHeroCreatedByStage = "img___heroImageHero___createdBy___stage",
+  ImgHeroImageHeroCreatedByUpdatedAt = "img___heroImageHero___createdBy___updatedAt",
+  ImgHeroImageHeroHeroCta = "img___heroImageHero___heroCta",
+  ImgHeroImageHeroHeroCustomers = "img___heroImageHero___heroCustomers",
+  ImgHeroImageHeroHeroCustomersAlt = "img___heroImageHero___heroCustomers___alt",
+  ImgHeroImageHeroHeroCustomersChildren = "img___heroImageHero___heroCustomers___children",
+  ImgHeroImageHeroHeroCustomersCreatedAt = "img___heroImageHero___heroCustomers___createdAt",
+  ImgHeroImageHeroHeroCustomersId = "img___heroImageHero___heroCustomers___id",
+  ImgHeroImageHeroHeroCustomersPublishedAt = "img___heroImageHero___heroCustomers___publishedAt",
+  ImgHeroImageHeroHeroCustomersRemoteId = "img___heroImageHero___heroCustomers___remoteId",
+  ImgHeroImageHeroHeroCustomersRemoteTypeName = "img___heroImageHero___heroCustomers___remoteTypeName",
+  ImgHeroImageHeroHeroCustomersStage = "img___heroImageHero___heroCustomers___stage",
+  ImgHeroImageHeroHeroCustomersUpdatedAt = "img___heroImageHero___heroCustomers___updatedAt",
+  ImgHeroImageHeroHeroImageChildren = "img___heroImageHero___heroImage___children",
+  ImgHeroImageHeroHeroImageCreatedAt = "img___heroImageHero___heroImage___createdAt",
+  ImgHeroImageHeroHeroImageFileName = "img___heroImageHero___heroImage___fileName",
+  ImgHeroImageHeroHeroImageHandle = "img___heroImageHero___heroImage___handle",
+  ImgHeroImageHeroHeroImageHeight = "img___heroImageHero___heroImage___height",
+  ImgHeroImageHeroHeroImageHeroCustomerImgHeroCustomer = "img___heroImageHero___heroImage___heroCustomerImgHeroCustomer",
+  ImgHeroImageHeroHeroImageHeroImageHero = "img___heroImageHero___heroImage___heroImageHero",
+  ImgHeroImageHeroHeroImageId = "img___heroImageHero___heroImage___id",
+  ImgHeroImageHeroHeroImageLocale = "img___heroImageHero___heroImage___locale",
+  ImgHeroImageHeroHeroImageMimeType = "img___heroImageHero___heroImage___mimeType",
+  ImgHeroImageHeroHeroImagePublishedAt = "img___heroImageHero___heroImage___publishedAt",
+  ImgHeroImageHeroHeroImageRemoteId = "img___heroImageHero___heroImage___remoteId",
+  ImgHeroImageHeroHeroImageRemoteTypeName = "img___heroImageHero___heroImage___remoteTypeName",
+  ImgHeroImageHeroHeroImageSize = "img___heroImageHero___heroImage___size",
+  ImgHeroImageHeroHeroImageStage = "img___heroImageHero___heroImage___stage",
+  ImgHeroImageHeroHeroImageUpdatedAt = "img___heroImageHero___heroImage___updatedAt",
+  ImgHeroImageHeroHeroImageUrl = "img___heroImageHero___heroImage___url",
+  ImgHeroImageHeroHeroImageWidth = "img___heroImageHero___heroImage___width",
+  ImgHeroImageHeroHeroSocials = "img___heroImageHero___heroSocials",
+  ImgHeroImageHeroId = "img___heroImageHero___id",
+  ImgHeroImageHeroInternalContent = "img___heroImageHero___internal___content",
+  ImgHeroImageHeroInternalContentDigest = "img___heroImageHero___internal___contentDigest",
+  ImgHeroImageHeroInternalDescription = "img___heroImageHero___internal___description",
+  ImgHeroImageHeroInternalFieldOwners = "img___heroImageHero___internal___fieldOwners",
+  ImgHeroImageHeroInternalIgnoreType = "img___heroImageHero___internal___ignoreType",
+  ImgHeroImageHeroInternalMediaType = "img___heroImageHero___internal___mediaType",
+  ImgHeroImageHeroInternalOwner = "img___heroImageHero___internal___owner",
+  ImgHeroImageHeroInternalType = "img___heroImageHero___internal___type",
+  ImgHeroImageHeroParentChildren = "img___heroImageHero___parent___children",
+  ImgHeroImageHeroParentId = "img___heroImageHero___parent___id",
+  ImgHeroImageHeroPublishedAt = "img___heroImageHero___publishedAt",
+  ImgHeroImageHeroPublishedByChildren = "img___heroImageHero___publishedBy___children",
+  ImgHeroImageHeroPublishedByCreatedAt = "img___heroImageHero___publishedBy___createdAt",
+  ImgHeroImageHeroPublishedById = "img___heroImageHero___publishedBy___id",
+  ImgHeroImageHeroPublishedByIsActive = "img___heroImageHero___publishedBy___isActive",
+  ImgHeroImageHeroPublishedByKind = "img___heroImageHero___publishedBy___kind",
+  ImgHeroImageHeroPublishedByName = "img___heroImageHero___publishedBy___name",
+  ImgHeroImageHeroPublishedByPicture = "img___heroImageHero___publishedBy___picture",
+  ImgHeroImageHeroPublishedByPublishedAt = "img___heroImageHero___publishedBy___publishedAt",
+  ImgHeroImageHeroPublishedByRemoteId = "img___heroImageHero___publishedBy___remoteId",
+  ImgHeroImageHeroPublishedByRemoteTypeName = "img___heroImageHero___publishedBy___remoteTypeName",
+  ImgHeroImageHeroPublishedByStage = "img___heroImageHero___publishedBy___stage",
+  ImgHeroImageHeroPublishedByUpdatedAt = "img___heroImageHero___publishedBy___updatedAt",
+  ImgHeroImageHeroRemoteId = "img___heroImageHero___remoteId",
+  ImgHeroImageHeroRemoteTypeName = "img___heroImageHero___remoteTypeName",
+  ImgHeroImageHeroStage = "img___heroImageHero___stage",
+  ImgHeroImageHeroSubtitle = "img___heroImageHero___subtitle",
+  ImgHeroImageHeroTitle = "img___heroImageHero___title",
+  ImgHeroImageHeroUpdatedAt = "img___heroImageHero___updatedAt",
+  ImgHeroImageHeroUpdatedByChildren = "img___heroImageHero___updatedBy___children",
+  ImgHeroImageHeroUpdatedByCreatedAt = "img___heroImageHero___updatedBy___createdAt",
+  ImgHeroImageHeroUpdatedById = "img___heroImageHero___updatedBy___id",
+  ImgHeroImageHeroUpdatedByIsActive = "img___heroImageHero___updatedBy___isActive",
+  ImgHeroImageHeroUpdatedByKind = "img___heroImageHero___updatedBy___kind",
+  ImgHeroImageHeroUpdatedByName = "img___heroImageHero___updatedBy___name",
+  ImgHeroImageHeroUpdatedByPicture = "img___heroImageHero___updatedBy___picture",
+  ImgHeroImageHeroUpdatedByPublishedAt = "img___heroImageHero___updatedBy___publishedAt",
+  ImgHeroImageHeroUpdatedByRemoteId = "img___heroImageHero___updatedBy___remoteId",
+  ImgHeroImageHeroUpdatedByRemoteTypeName = "img___heroImageHero___updatedBy___remoteTypeName",
+  ImgHeroImageHeroUpdatedByStage = "img___heroImageHero___updatedBy___stage",
+  ImgHeroImageHeroUpdatedByUpdatedAt = "img___heroImageHero___updatedBy___updatedAt",
+  ImgId = "img___id",
+  ImgInternalContent = "img___internal___content",
+  ImgInternalContentDigest = "img___internal___contentDigest",
+  ImgInternalDescription = "img___internal___description",
+  ImgInternalFieldOwners = "img___internal___fieldOwners",
+  ImgInternalIgnoreType = "img___internal___ignoreType",
+  ImgInternalMediaType = "img___internal___mediaType",
+  ImgInternalOwner = "img___internal___owner",
+  ImgInternalType = "img___internal___type",
+  ImgLocale = "img___locale",
+  ImgMimeType = "img___mimeType",
+  ImgParentChildren = "img___parent___children",
+  ImgParentChildrenChildren = "img___parent___children___children",
+  ImgParentChildrenId = "img___parent___children___id",
+  ImgParentId = "img___parent___id",
+  ImgParentInternalContent = "img___parent___internal___content",
+  ImgParentInternalContentDigest = "img___parent___internal___contentDigest",
+  ImgParentInternalDescription = "img___parent___internal___description",
+  ImgParentInternalFieldOwners = "img___parent___internal___fieldOwners",
+  ImgParentInternalIgnoreType = "img___parent___internal___ignoreType",
+  ImgParentInternalMediaType = "img___parent___internal___mediaType",
+  ImgParentInternalOwner = "img___parent___internal___owner",
+  ImgParentInternalType = "img___parent___internal___type",
+  ImgParentParentChildren = "img___parent___parent___children",
+  ImgParentParentId = "img___parent___parent___id",
+  ImgPublishedAt = "img___publishedAt",
+  ImgPublishedByChildren = "img___publishedBy___children",
+  ImgPublishedByChildrenChildren = "img___publishedBy___children___children",
+  ImgPublishedByChildrenId = "img___publishedBy___children___id",
+  ImgPublishedByCreatedAt = "img___publishedBy___createdAt",
+  ImgPublishedById = "img___publishedBy___id",
+  ImgPublishedByInternalContent = "img___publishedBy___internal___content",
+  ImgPublishedByInternalContentDigest = "img___publishedBy___internal___contentDigest",
+  ImgPublishedByInternalDescription = "img___publishedBy___internal___description",
+  ImgPublishedByInternalFieldOwners = "img___publishedBy___internal___fieldOwners",
+  ImgPublishedByInternalIgnoreType = "img___publishedBy___internal___ignoreType",
+  ImgPublishedByInternalMediaType = "img___publishedBy___internal___mediaType",
+  ImgPublishedByInternalOwner = "img___publishedBy___internal___owner",
+  ImgPublishedByInternalType = "img___publishedBy___internal___type",
+  ImgPublishedByIsActive = "img___publishedBy___isActive",
+  ImgPublishedByKind = "img___publishedBy___kind",
+  ImgPublishedByName = "img___publishedBy___name",
+  ImgPublishedByParentChildren = "img___publishedBy___parent___children",
+  ImgPublishedByParentId = "img___publishedBy___parent___id",
+  ImgPublishedByPicture = "img___publishedBy___picture",
+  ImgPublishedByPublishedAt = "img___publishedBy___publishedAt",
+  ImgPublishedByRemoteId = "img___publishedBy___remoteId",
+  ImgPublishedByRemoteTypeName = "img___publishedBy___remoteTypeName",
+  ImgPublishedByStage = "img___publishedBy___stage",
+  ImgPublishedByUpdatedAt = "img___publishedBy___updatedAt",
+  ImgRemoteId = "img___remoteId",
+  ImgRemoteTypeName = "img___remoteTypeName",
+  ImgSize = "img___size",
+  ImgStage = "img___stage",
+  ImgUpdatedAt = "img___updatedAt",
+  ImgUpdatedByChildren = "img___updatedBy___children",
+  ImgUpdatedByChildrenChildren = "img___updatedBy___children___children",
+  ImgUpdatedByChildrenId = "img___updatedBy___children___id",
+  ImgUpdatedByCreatedAt = "img___updatedBy___createdAt",
+  ImgUpdatedById = "img___updatedBy___id",
+  ImgUpdatedByInternalContent = "img___updatedBy___internal___content",
+  ImgUpdatedByInternalContentDigest = "img___updatedBy___internal___contentDigest",
+  ImgUpdatedByInternalDescription = "img___updatedBy___internal___description",
+  ImgUpdatedByInternalFieldOwners = "img___updatedBy___internal___fieldOwners",
+  ImgUpdatedByInternalIgnoreType = "img___updatedBy___internal___ignoreType",
+  ImgUpdatedByInternalMediaType = "img___updatedBy___internal___mediaType",
+  ImgUpdatedByInternalOwner = "img___updatedBy___internal___owner",
+  ImgUpdatedByInternalType = "img___updatedBy___internal___type",
+  ImgUpdatedByIsActive = "img___updatedBy___isActive",
+  ImgUpdatedByKind = "img___updatedBy___kind",
+  ImgUpdatedByName = "img___updatedBy___name",
+  ImgUpdatedByParentChildren = "img___updatedBy___parent___children",
+  ImgUpdatedByParentId = "img___updatedBy___parent___id",
+  ImgUpdatedByPicture = "img___updatedBy___picture",
+  ImgUpdatedByPublishedAt = "img___updatedBy___publishedAt",
+  ImgUpdatedByRemoteId = "img___updatedBy___remoteId",
+  ImgUpdatedByRemoteTypeName = "img___updatedBy___remoteTypeName",
+  ImgUpdatedByStage = "img___updatedBy___stage",
+  ImgUpdatedByUpdatedAt = "img___updatedBy___updatedAt",
+  ImgUrl = "img___url",
+  ImgWidth = "img___width",
+  InternalContent = "internal___content",
+  InternalContentDigest = "internal___contentDigest",
+  InternalDescription = "internal___description",
+  InternalFieldOwners = "internal___fieldOwners",
+  InternalIgnoreType = "internal___ignoreType",
+  InternalMediaType = "internal___mediaType",
+  InternalOwner = "internal___owner",
+  InternalType = "internal___type",
+  ParentChildren = "parent___children",
+  ParentChildrenChildren = "parent___children___children",
+  ParentChildrenChildrenChildren = "parent___children___children___children",
+  ParentChildrenChildrenId = "parent___children___children___id",
+  ParentChildrenId = "parent___children___id",
+  ParentChildrenInternalContent = "parent___children___internal___content",
+  ParentChildrenInternalContentDigest = "parent___children___internal___contentDigest",
+  ParentChildrenInternalDescription = "parent___children___internal___description",
+  ParentChildrenInternalFieldOwners = "parent___children___internal___fieldOwners",
+  ParentChildrenInternalIgnoreType = "parent___children___internal___ignoreType",
+  ParentChildrenInternalMediaType = "parent___children___internal___mediaType",
+  ParentChildrenInternalOwner = "parent___children___internal___owner",
+  ParentChildrenInternalType = "parent___children___internal___type",
+  ParentChildrenParentChildren = "parent___children___parent___children",
+  ParentChildrenParentId = "parent___children___parent___id",
+  ParentId = "parent___id",
+  ParentInternalContent = "parent___internal___content",
+  ParentInternalContentDigest = "parent___internal___contentDigest",
+  ParentInternalDescription = "parent___internal___description",
+  ParentInternalFieldOwners = "parent___internal___fieldOwners",
+  ParentInternalIgnoreType = "parent___internal___ignoreType",
+  ParentInternalMediaType = "parent___internal___mediaType",
+  ParentInternalOwner = "parent___internal___owner",
+  ParentInternalType = "parent___internal___type",
+  ParentParentChildren = "parent___parent___children",
+  ParentParentChildrenChildren = "parent___parent___children___children",
+  ParentParentChildrenId = "parent___parent___children___id",
+  ParentParentId = "parent___parent___id",
+  ParentParentInternalContent = "parent___parent___internal___content",
+  ParentParentInternalContentDigest = "parent___parent___internal___contentDigest",
+  ParentParentInternalDescription = "parent___parent___internal___description",
+  ParentParentInternalFieldOwners = "parent___parent___internal___fieldOwners",
+  ParentParentInternalIgnoreType = "parent___parent___internal___ignoreType",
+  ParentParentInternalMediaType = "parent___parent___internal___mediaType",
+  ParentParentInternalOwner = "parent___parent___internal___owner",
+  ParentParentInternalType = "parent___parent___internal___type",
+  ParentParentParentChildren = "parent___parent___parent___children",
+  ParentParentParentId = "parent___parent___parent___id",
+  PublishedAt = "publishedAt",
+  PublishedByChildren = "publishedBy___children",
+  PublishedByChildrenChildren = "publishedBy___children___children",
+  PublishedByChildrenChildrenChildren = "publishedBy___children___children___children",
+  PublishedByChildrenChildrenId = "publishedBy___children___children___id",
+  PublishedByChildrenId = "publishedBy___children___id",
+  PublishedByChildrenInternalContent = "publishedBy___children___internal___content",
+  PublishedByChildrenInternalContentDigest = "publishedBy___children___internal___contentDigest",
+  PublishedByChildrenInternalDescription = "publishedBy___children___internal___description",
+  PublishedByChildrenInternalFieldOwners = "publishedBy___children___internal___fieldOwners",
+  PublishedByChildrenInternalIgnoreType = "publishedBy___children___internal___ignoreType",
+  PublishedByChildrenInternalMediaType = "publishedBy___children___internal___mediaType",
+  PublishedByChildrenInternalOwner = "publishedBy___children___internal___owner",
+  PublishedByChildrenInternalType = "publishedBy___children___internal___type",
+  PublishedByChildrenParentChildren = "publishedBy___children___parent___children",
+  PublishedByChildrenParentId = "publishedBy___children___parent___id",
+  PublishedByCreatedAt = "publishedBy___createdAt",
+  PublishedById = "publishedBy___id",
+  PublishedByInternalContent = "publishedBy___internal___content",
+  PublishedByInternalContentDigest = "publishedBy___internal___contentDigest",
+  PublishedByInternalDescription = "publishedBy___internal___description",
+  PublishedByInternalFieldOwners = "publishedBy___internal___fieldOwners",
+  PublishedByInternalIgnoreType = "publishedBy___internal___ignoreType",
+  PublishedByInternalMediaType = "publishedBy___internal___mediaType",
+  PublishedByInternalOwner = "publishedBy___internal___owner",
+  PublishedByInternalType = "publishedBy___internal___type",
+  PublishedByIsActive = "publishedBy___isActive",
+  PublishedByKind = "publishedBy___kind",
+  PublishedByName = "publishedBy___name",
+  PublishedByParentChildren = "publishedBy___parent___children",
+  PublishedByParentChildrenChildren = "publishedBy___parent___children___children",
+  PublishedByParentChildrenId = "publishedBy___parent___children___id",
+  PublishedByParentId = "publishedBy___parent___id",
+  PublishedByParentInternalContent = "publishedBy___parent___internal___content",
+  PublishedByParentInternalContentDigest = "publishedBy___parent___internal___contentDigest",
+  PublishedByParentInternalDescription = "publishedBy___parent___internal___description",
+  PublishedByParentInternalFieldOwners = "publishedBy___parent___internal___fieldOwners",
+  PublishedByParentInternalIgnoreType = "publishedBy___parent___internal___ignoreType",
+  PublishedByParentInternalMediaType = "publishedBy___parent___internal___mediaType",
+  PublishedByParentInternalOwner = "publishedBy___parent___internal___owner",
+  PublishedByParentInternalType = "publishedBy___parent___internal___type",
+  PublishedByParentParentChildren = "publishedBy___parent___parent___children",
+  PublishedByParentParentId = "publishedBy___parent___parent___id",
+  PublishedByPicture = "publishedBy___picture",
+  PublishedByPublishedAt = "publishedBy___publishedAt",
+  PublishedByRemoteId = "publishedBy___remoteId",
+  PublishedByRemoteTypeName = "publishedBy___remoteTypeName",
+  PublishedByStage = "publishedBy___stage",
+  PublishedByUpdatedAt = "publishedBy___updatedAt",
+  RemoteId = "remoteId",
+  RemoteTypeName = "remoteTypeName",
+  Stage = "stage",
+  UpdatedAt = "updatedAt",
+  UpdatedByChildren = "updatedBy___children",
+  UpdatedByChildrenChildren = "updatedBy___children___children",
+  UpdatedByChildrenChildrenChildren = "updatedBy___children___children___children",
+  UpdatedByChildrenChildrenId = "updatedBy___children___children___id",
+  UpdatedByChildrenId = "updatedBy___children___id",
+  UpdatedByChildrenInternalContent = "updatedBy___children___internal___content",
+  UpdatedByChildrenInternalContentDigest = "updatedBy___children___internal___contentDigest",
+  UpdatedByChildrenInternalDescription = "updatedBy___children___internal___description",
+  UpdatedByChildrenInternalFieldOwners = "updatedBy___children___internal___fieldOwners",
+  UpdatedByChildrenInternalIgnoreType = "updatedBy___children___internal___ignoreType",
+  UpdatedByChildrenInternalMediaType = "updatedBy___children___internal___mediaType",
+  UpdatedByChildrenInternalOwner = "updatedBy___children___internal___owner",
+  UpdatedByChildrenInternalType = "updatedBy___children___internal___type",
+  UpdatedByChildrenParentChildren = "updatedBy___children___parent___children",
+  UpdatedByChildrenParentId = "updatedBy___children___parent___id",
+  UpdatedByCreatedAt = "updatedBy___createdAt",
+  UpdatedById = "updatedBy___id",
+  UpdatedByInternalContent = "updatedBy___internal___content",
+  UpdatedByInternalContentDigest = "updatedBy___internal___contentDigest",
+  UpdatedByInternalDescription = "updatedBy___internal___description",
+  UpdatedByInternalFieldOwners = "updatedBy___internal___fieldOwners",
+  UpdatedByInternalIgnoreType = "updatedBy___internal___ignoreType",
+  UpdatedByInternalMediaType = "updatedBy___internal___mediaType",
+  UpdatedByInternalOwner = "updatedBy___internal___owner",
+  UpdatedByInternalType = "updatedBy___internal___type",
+  UpdatedByIsActive = "updatedBy___isActive",
+  UpdatedByKind = "updatedBy___kind",
+  UpdatedByName = "updatedBy___name",
+  UpdatedByParentChildren = "updatedBy___parent___children",
+  UpdatedByParentChildrenChildren = "updatedBy___parent___children___children",
+  UpdatedByParentChildrenId = "updatedBy___parent___children___id",
+  UpdatedByParentId = "updatedBy___parent___id",
+  UpdatedByParentInternalContent = "updatedBy___parent___internal___content",
+  UpdatedByParentInternalContentDigest = "updatedBy___parent___internal___contentDigest",
+  UpdatedByParentInternalDescription = "updatedBy___parent___internal___description",
+  UpdatedByParentInternalFieldOwners = "updatedBy___parent___internal___fieldOwners",
+  UpdatedByParentInternalIgnoreType = "updatedBy___parent___internal___ignoreType",
+  UpdatedByParentInternalMediaType = "updatedBy___parent___internal___mediaType",
+  UpdatedByParentInternalOwner = "updatedBy___parent___internal___owner",
+  UpdatedByParentInternalType = "updatedBy___parent___internal___type",
+  UpdatedByParentParentChildren = "updatedBy___parent___parent___children",
+  UpdatedByParentParentId = "updatedBy___parent___parent___id",
+  UpdatedByPicture = "updatedBy___picture",
+  UpdatedByPublishedAt = "updatedBy___publishedAt",
+  UpdatedByRemoteId = "updatedBy___remoteId",
+  UpdatedByRemoteTypeName = "updatedBy___remoteTypeName",
+  UpdatedByStage = "updatedBy___stage",
+  UpdatedByUpdatedAt = "updatedBy___updatedAt",
+}
+
+export type GraphCms_FeatureIconFilterInput = {
+  children?: Maybe<NodeFilterListInput>;
+  createdAt?: Maybe<JsonQueryOperatorInput>;
+  createdBy?: Maybe<GraphCms_UserFilterInput>;
+  featDesc?: Maybe<StringQueryOperatorInput>;
+  featTitle?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  img?: Maybe<GraphCms_AssetFilterInput>;
+  internal?: Maybe<InternalFilterInput>;
+  parent?: Maybe<NodeFilterInput>;
+  publishedAt?: Maybe<JsonQueryOperatorInput>;
+  publishedBy?: Maybe<GraphCms_UserFilterInput>;
+  remoteId?: Maybe<IdQueryOperatorInput>;
+  remoteTypeName?: Maybe<StringQueryOperatorInput>;
+  stage?: Maybe<GraphCms_StageQueryOperatorInput>;
+  updatedAt?: Maybe<JsonQueryOperatorInput>;
+  updatedBy?: Maybe<GraphCms_UserFilterInput>;
+};
+
+export type GraphCms_FeatureIconFilterListInput = {
+  elemMatch?: Maybe<GraphCms_FeatureIconFilterInput>;
+};
+
+export type GraphCms_FeatureIconGroupConnection = {
+  distinct: Array<Scalars["String"]>;
+  edges: Array<GraphCms_FeatureIconEdge>;
+  field: Scalars["String"];
+  fieldValue?: Maybe<Scalars["String"]>;
+  group: Array<GraphCms_FeatureIconGroupConnection>;
+  max?: Maybe<Scalars["Float"]>;
+  min?: Maybe<Scalars["Float"]>;
+  nodes: Array<GraphCms_FeatureIcon>;
+  pageInfo: PageInfo;
+  sum?: Maybe<Scalars["Float"]>;
+  totalCount: Scalars["Int"];
+};
+
+export type GraphCms_FeatureIconGroupConnectionDistinctArgs = {
+  field: GraphCms_FeatureIconFieldsEnum;
+};
+
+export type GraphCms_FeatureIconGroupConnectionGroupArgs = {
+  field: GraphCms_FeatureIconFieldsEnum;
+  limit?: Maybe<Scalars["Int"]>;
+  skip?: Maybe<Scalars["Int"]>;
+};
+
+export type GraphCms_FeatureIconGroupConnectionMaxArgs = {
+  field: GraphCms_FeatureIconFieldsEnum;
+};
+
+export type GraphCms_FeatureIconGroupConnectionMinArgs = {
+  field: GraphCms_FeatureIconFieldsEnum;
+};
+
+export type GraphCms_FeatureIconGroupConnectionSumArgs = {
+  field: GraphCms_FeatureIconFieldsEnum;
+};
+
+export type GraphCms_FeatureIconSortInput = {
+  fields?: Maybe<Array<Maybe<GraphCms_FeatureIconFieldsEnum>>>;
+  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
+export type GraphCms_FeatureSortInput = {
+  fields?: Maybe<Array<Maybe<GraphCms_FeatureFieldsEnum>>>;
+  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
 export type GraphCms_Hero = Node & {
   children: Array<Node>;
   createdAt: Scalars["JSON"];
@@ -4128,6 +5348,8 @@ export type Query = {
   allDirectory: DirectoryConnection;
   allFile: FileConnection;
   allGraphCmsAsset: GraphCms_AssetConnection;
+  allGraphCmsFeature: GraphCms_FeatureConnection;
+  allGraphCmsFeatureIcon: GraphCms_FeatureIconConnection;
   allGraphCmsHero: GraphCms_HeroConnection;
   allGraphCmsHeroCustomer: GraphCms_HeroCustomerConnection;
   allGraphCmsUser: GraphCms_UserConnection;
@@ -4140,6 +5362,8 @@ export type Query = {
   directory?: Maybe<Directory>;
   file?: Maybe<File>;
   graphCmsAsset?: Maybe<GraphCms_Asset>;
+  graphCmsFeature?: Maybe<GraphCms_Feature>;
+  graphCmsFeatureIcon?: Maybe<GraphCms_FeatureIcon>;
   graphCmsHero?: Maybe<GraphCms_Hero>;
   graphCmsHeroCustomer?: Maybe<GraphCms_HeroCustomer>;
   graphCmsUser?: Maybe<GraphCms_User>;
@@ -4170,6 +5394,20 @@ export type QueryAllGraphCmsAssetArgs = {
   limit?: Maybe<Scalars["Int"]>;
   skip?: Maybe<Scalars["Int"]>;
   sort?: Maybe<GraphCms_AssetSortInput>;
+};
+
+export type QueryAllGraphCmsFeatureArgs = {
+  filter?: Maybe<GraphCms_FeatureFilterInput>;
+  limit?: Maybe<Scalars["Int"]>;
+  skip?: Maybe<Scalars["Int"]>;
+  sort?: Maybe<GraphCms_FeatureSortInput>;
+};
+
+export type QueryAllGraphCmsFeatureIconArgs = {
+  filter?: Maybe<GraphCms_FeatureIconFilterInput>;
+  limit?: Maybe<Scalars["Int"]>;
+  skip?: Maybe<Scalars["Int"]>;
+  sort?: Maybe<GraphCms_FeatureIconSortInput>;
 };
 
 export type QueryAllGraphCmsHeroArgs = {
@@ -4340,6 +5578,44 @@ export type QueryGraphCmsAssetArgs = {
   updatedBy?: Maybe<GraphCms_UserFilterInput>;
   url?: Maybe<StringQueryOperatorInput>;
   width?: Maybe<FloatQueryOperatorInput>;
+};
+
+export type QueryGraphCmsFeatureArgs = {
+  children?: Maybe<NodeFilterListInput>;
+  createdAt?: Maybe<JsonQueryOperatorInput>;
+  createdBy?: Maybe<GraphCms_UserFilterInput>;
+  desc?: Maybe<StringQueryOperatorInput>;
+  featureIcons?: Maybe<GraphCms_FeatureIconFilterListInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  internal?: Maybe<InternalFilterInput>;
+  parent?: Maybe<NodeFilterInput>;
+  publishedAt?: Maybe<JsonQueryOperatorInput>;
+  publishedBy?: Maybe<GraphCms_UserFilterInput>;
+  remoteId?: Maybe<IdQueryOperatorInput>;
+  remoteTypeName?: Maybe<StringQueryOperatorInput>;
+  stage?: Maybe<GraphCms_StageQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  updatedAt?: Maybe<JsonQueryOperatorInput>;
+  updatedBy?: Maybe<GraphCms_UserFilterInput>;
+};
+
+export type QueryGraphCmsFeatureIconArgs = {
+  children?: Maybe<NodeFilterListInput>;
+  createdAt?: Maybe<JsonQueryOperatorInput>;
+  createdBy?: Maybe<GraphCms_UserFilterInput>;
+  featDesc?: Maybe<StringQueryOperatorInput>;
+  featTitle?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  img?: Maybe<GraphCms_AssetFilterInput>;
+  internal?: Maybe<InternalFilterInput>;
+  parent?: Maybe<NodeFilterInput>;
+  publishedAt?: Maybe<JsonQueryOperatorInput>;
+  publishedBy?: Maybe<GraphCms_UserFilterInput>;
+  remoteId?: Maybe<IdQueryOperatorInput>;
+  remoteTypeName?: Maybe<StringQueryOperatorInput>;
+  stage?: Maybe<GraphCms_StageQueryOperatorInput>;
+  updatedAt?: Maybe<JsonQueryOperatorInput>;
+  updatedBy?: Maybe<GraphCms_UserFilterInput>;
 };
 
 export type QueryGraphCmsHeroArgs = {
@@ -5591,6 +6867,22 @@ export type TransformOptions = {
 
 export type WebPOptions = {
   quality?: Maybe<Scalars["Int"]>;
+};
+
+export type FeatQueryVariables = Exact<{ [key: string]: never }>;
+
+export type FeatQuery = {
+  allGraphCmsFeature: {
+    nodes: Array<{
+      title?: string | null | undefined;
+      desc?: string | null | undefined;
+      featureIcons: Array<{
+        featDesc?: string | null | undefined;
+        featTitle?: string | null | undefined;
+        img?: { id: string; url: string } | null | undefined;
+      }>;
+    }>;
+  };
 };
 
 export type HeroQueryVariables = Exact<{ [key: string]: never }>;

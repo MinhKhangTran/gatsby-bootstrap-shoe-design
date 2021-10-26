@@ -15,6 +15,10 @@ $headings-font-family: "Anton", sans-serif;
 
 // links
 
+// navbar
+$navbar-light-color: #198754;
+$navbar-light-toggler-border-color: rgba(#198754, 0.1);
+
 // import variables and mixins files (so you can use them below)
 // any redefined vars above will be incorporated into the files (e.g. in maps)
 @import "~bootstrap/scss/variables";
@@ -46,7 +50,24 @@ $green-colors: (
 // import bootstrap whole sass lib (incorporates all above redefined vars & values)
 @import "~bootstrap/scss/bootstrap";
 
+//Scrollbar
+::selection {
+  background: $success;
+  color: $success;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background: $success;
+  border-radius: 10px;
+}
+
 //import custom components
 @import "./footer";
 @import "./navigation";
 @import "./hero";
+@import "./feature";
