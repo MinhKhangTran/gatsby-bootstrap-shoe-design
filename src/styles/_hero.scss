@@ -1,0 +1,41 @@
+#hero {
+  background: #639b81;
+  height: 100vh;
+  p {
+    color: #ffffff;
+  }
+}
+h1 {
+  font-size: 6rem;
+  margin-top: 7rem;
+  color: #ffffff;
+  text-align: center;
+}
+.hero_subtitle {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.hero_wrapper > * {
+  margin-right: -1rem;
+}
+.hero_socials {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 9rem;
+    text-align: left;
+  }
+  .hero_subtitle {
+    font-size: 3rem;
+    text-align: left;
+    font-weight: 400;
+  }
+  .hero_row {
+    height: 100vh;
+  }
+}
