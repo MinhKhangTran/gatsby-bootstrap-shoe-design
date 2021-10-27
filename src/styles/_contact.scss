@@ -1,0 +1,13 @@
+#contact {
+  max-width: 782px;
+  width: 90%;
+  margin: 0 auto;
+}
+input,
+textarea {
+  border-left: none !important;
+  border-right: none !important;
+  border-top: none !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}

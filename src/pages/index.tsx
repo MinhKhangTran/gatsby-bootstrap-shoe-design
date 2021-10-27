@@ -1,5 +1,6 @@
 import { SkipNavContent } from "@reach/skip-nav";
 import * as React from "react";
+import Contact from "../components/Contact";
 import CTA from "../components/CTA";
 import Feature from "../components/Feature";
 import Guide from "../components/Guide";
@@ -25,6 +26,7 @@ const IndexPage = () => {
       <Guide />
       <CTA />
       <Team />
+      <Contact />
     </Layout>
   );
 };
