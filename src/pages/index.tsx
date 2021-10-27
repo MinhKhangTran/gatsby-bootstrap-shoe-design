@@ -1,6 +1,7 @@
 import { SkipNavContent } from "@reach/skip-nav";
 import * as React from "react";
 import Feature from "../components/Feature";
+import Guide from "../components/Guide";
 import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 import Navigation from "../components/Navigation";
@@ -19,6 +20,7 @@ const IndexPage = () => {
       <Feature />
       <Project />
       <Testimonials />
+      <Guide />
     </Layout>
   );
 };

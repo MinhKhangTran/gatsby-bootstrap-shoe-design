@@ -12171,6 +12171,24 @@ export type FeatQuery = {
   };
 };
 
+export type GuideQueryVariables = Exact<{ [key: string]: never }>;
+
+export type GuideQuery = {
+  allGraphCmsGuide: {
+    nodes: Array<{
+      title?: string | null | undefined;
+      desc?: string | null | undefined;
+      guideItems: Array<{
+        desc?: string | null | undefined;
+        id: string;
+        number?: number | null | undefined;
+        name?: string | null | undefined;
+        image?: { url: string } | null | undefined;
+      }>;
+    }>;
+  };
+};
+
 export type HeroQueryVariables = Exact<{ [key: string]: never }>;
 
 export type HeroQuery = {

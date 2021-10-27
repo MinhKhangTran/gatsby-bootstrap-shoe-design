@@ -1,0 +1,55 @@
+#guide {
+  margin-top: 8rem;
+}
+.quote {
+  font-size: 72px;
+  font-weight: bold;
+  margin: 0;
+  top: 50%;
+  left: 70%;
+  width: 100px;
+}
+.guide_text {
+  padding-top: 5rem;
+}
+.bild {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .quote {
+    font-size: 96px;
+    margin: 0;
+    top: 30%;
+    left: 70%;
+    width: 100px;
+  }
+
+  .guide_text {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .quote {
+    font-size: 96px;
+    margin: 0;
+    top: 5%;
+    left: 90%;
+    width: 100px;
+  }
+  .guide_text {
+    padding: 0rem 0rem 0 7rem;
+  }
+  .guide_wrapper {
+    align-items: center;
+    &.flex-lg-row-reverse {
+      .guide_text {
+        padding: 0rem 7rem 0 0rem;
+      }
+      .quote {
+        left: 45%;
+        width: 100px;
+      }
+    }
+  }
+}
