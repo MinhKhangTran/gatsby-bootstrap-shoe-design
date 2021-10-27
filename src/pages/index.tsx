@@ -1,5 +1,6 @@
 import { SkipNavContent } from "@reach/skip-nav";
 import * as React from "react";
+import CTA from "../components/CTA";
 import Feature from "../components/Feature";
 import Guide from "../components/Guide";
 import Hero from "../components/Hero";
@@ -21,6 +22,7 @@ const IndexPage = () => {
       <Project />
       <Testimonials />
       <Guide />
+      <CTA />
     </Layout>
   );
 };

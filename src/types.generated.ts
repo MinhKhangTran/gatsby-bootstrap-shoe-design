@@ -12155,6 +12155,17 @@ export type WebPOptions = {
   quality?: Maybe<Scalars["Int"]>;
 };
 
+export type CtaQueryVariables = Exact<{ [key: string]: never }>;
+
+export type CtaQuery = {
+  allGraphCmsCta: {
+    nodes: Array<{
+      ctaBtn?: string | null | undefined;
+      ctaText?: string | null | undefined;
+    }>;
+  };
+};
+
 export type FeatQueryVariables = Exact<{ [key: string]: never }>;
 
 export type FeatQuery = {

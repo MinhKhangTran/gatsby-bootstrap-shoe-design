@@ -22,7 +22,7 @@ const Guide = () => {
                 key={guide.id}
                 className={`guide_wrapper py-5 border-bottom border-success position-relative ${
                   (index + 1) % 2 === 0 && "flex-lg-row-reverse"
-                }`}
+                } ${index === 2 && "border-bottom-0"}`}
               >
                 <Col md={4}>
                   <img

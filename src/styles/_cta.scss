@@ -1,0 +1,18 @@
+#cta {
+  background: #d7fff7;
+  padding: 5rem 3rem;
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #cta {
+    margin: 3rem 10rem;
+    h2 {
+      font-size: 3rem;
+      text-align: center;
+    }
+  }
+}
