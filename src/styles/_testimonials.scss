@@ -9,7 +9,7 @@
   top: 30%;
 }
 .testi_text {
-  padding: 2rem 2rem 0 5rem;
+  padding: 0.6rem 2rem 0 2rem;
 }
 @media screen and (min-width: 768px) {
   .quote {
@@ -20,15 +20,15 @@
     width: 100px;
   }
   .testi_text {
-    padding: 0rem 0rem 0 4rem;
+    padding: 1rem 0rem 0 2rem;
   }
 }
 @media screen and (min-width: 992px) {
   .quote {
     font-size: 160px;
     margin: 0;
-    top: -10%;
-    left: 30%;
+    top: -20%;
+    left: 85%;
     width: 100px;
   }
   .testi_text {
@@ -41,7 +41,7 @@
         padding: 0rem 5rem 0 0rem;
       }
       .quote {
-        left: 60%;
+        left: 8%;
         width: 100px;
       }
     }

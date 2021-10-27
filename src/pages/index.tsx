@@ -8,6 +8,7 @@ import Layout from "../components/Layout";
 import Navigation from "../components/Navigation";
 import Project from "../components/Project";
 import SEO from "../components/Seo";
+import Team from "../components/Team";
 import Testimonials from "../components/Testimonials";
 
 // markup
@@ -23,6 +24,7 @@ const IndexPage = () => {
       <Testimonials />
       <Guide />
       <CTA />
+      <Team />
     </Layout>
   );
 };

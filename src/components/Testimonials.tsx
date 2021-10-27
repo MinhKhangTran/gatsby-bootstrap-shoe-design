@@ -25,15 +25,17 @@ const Testimonials = () => {
                   (index + 1) % 2 === 0 && "flex-lg-row-reverse"
                 }`}
               >
-                <Col md={4} xs={5}>
+                <Col lg={2} xs={5}>
                   <GatsbyImage
                     // @ts-expect-error
                     image={getImage(testi.image?.gatsbyImageData)}
                     alt={testi.name!}
                   />
                 </Col>
-                <p className="quote position-absolute text-green-200">"</p>
-                <Col md={8} lg={6} className="testi_text">
+                <p className="quote position-absolute d-none  text-green-200">
+                  "
+                </p>
+                <Col lg={8} className="testi_text">
                   <p className="lead text-secondary">{testi.testimonial}</p>
                   <h3>{testi.name}</h3>
                   <p className="muted">{testi.jobTitle}</p>
@@ -59,7 +61,7 @@ export const query = graphql`
           testimonial
           jobTitle
           image {
-            gatsbyImageData(placeholder: TRACED_SVG)
+            gatsbyImageData(placeholder: TRACED_SVG, height: 300, width: 267)
           }
         }
       }
