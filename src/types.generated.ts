@@ -12256,6 +12256,24 @@ export type SeoQuery = {
     | undefined;
 };
 
+export type TeamQueryVariables = Exact<{ [key: string]: never }>;
+
+export type TeamQuery = {
+  allGraphCmsTeam: {
+    nodes: Array<{
+      desc?: string | null | undefined;
+      title?: string | null | undefined;
+      teamItems: Array<{
+        id: string;
+        instaUrl?: string | null | undefined;
+        jobTitle?: string | null | undefined;
+        name?: string | null | undefined;
+        image?: { gatsbyImageData: unknown } | null | undefined;
+      }>;
+    }>;
+  };
+};
+
 export type TestimonialsQueryVariables = Exact<{ [key: string]: never }>;
 
 export type TestimonialsQuery = {
