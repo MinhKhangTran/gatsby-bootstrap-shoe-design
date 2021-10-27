@@ -100,6 +100,20 @@ $green-colors: (
     }
   }
 }
+@media screen and (min-width: 992px) {
+  .socials {
+    a {
+      width: 50px;
+      height: 50px;
+    }
+    .social_icon {
+      font-size: 2em;
+    }
+  }
+  .footer_socials span {
+    font-size: 1.5rem;
+  }
+}
 
 //import custom components
 @import "./footer";
