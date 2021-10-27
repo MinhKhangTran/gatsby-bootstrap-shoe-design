@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import Navigation from "../components/Navigation";
 import Project from "../components/Project";
 import SEO from "../components/Seo";
+import Testimonials from "../components/Testimonials";
 
 // markup
 const IndexPage = () => {
@@ -17,6 +18,7 @@ const IndexPage = () => {
       <SkipNavContent />
       <Feature />
       <Project />
+      <Testimonials />
     </Layout>
   );
 };

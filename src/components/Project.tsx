@@ -22,10 +22,10 @@ const Project = () => {
   return (
     <section id="project">
       <Container>
-        <h2 className="project_main_heading mt-5 text-capitalize">
+        <h2 className="section_heading mt-5 text-capitalize">
           {project_heading[0].title}
         </h2>
-        <p className="project_main_sub lead text-secondary">
+        <p className="section_sub lead text-secondary">
           {project_heading[0].desc}
         </p>
         <SimpleReactLightbox>

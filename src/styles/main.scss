@@ -66,9 +66,25 @@ $green-colors: (
   border-radius: 10px;
 }
 
+// section title and subtitle
+
+.section_sub {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 992px) {
+  .section_heading {
+    text-align: center;
+  }
+  .section_sub {
+    text-align: center;
+  }
+}
+
 //import custom components
 @import "./footer";
 @import "./navigation";
 @import "./hero";
 @import "./feature";
 @import "./project";
+@import "./testimonials";

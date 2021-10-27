@@ -1,0 +1,37 @@
+fragment Tesimonial on Tesimonial {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  title
+  desc
+  createdBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  updatedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  publishedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  testimonialItems {
+    ... on TestimonialItem {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+}

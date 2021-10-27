@@ -12,10 +12,8 @@ const Feature = () => {
   return (
     <section id="feature">
       <Container>
-        <h2 className="feature_main_heading mt-5 text-capitalize">
-          {feat.title}
-        </h2>
-        <p className="feature_main_sub lead text-secondary">{feat.desc}</p>
+        <h2 className="section_heading mt-5 text-capitalize">{feat.title}</h2>
+        <p className="section_sub lead text-secondary">{feat.desc}</p>
         <Row className="">
           {feat.featureIcons.map((feature) => {
             return (

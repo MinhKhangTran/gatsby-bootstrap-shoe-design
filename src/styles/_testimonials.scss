@@ -1,0 +1,49 @@
+#testimonials {
+  margin-top: 8rem;
+  background: #f0ffff;
+  padding: 1rem 0;
+}
+.quote {
+  font-size: 160px;
+  margin: 0;
+  top: 30%;
+}
+.testi_text {
+  padding: 2rem 2rem 0 5rem;
+}
+@media screen and (min-width: 768px) {
+  .quote {
+    font-size: 160px;
+    margin: 0;
+    top: -30%;
+    left: 30%;
+    width: 100px;
+  }
+  .testi_text {
+    padding: 0rem 0rem 0 4rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .quote {
+    font-size: 160px;
+    margin: 0;
+    top: -10%;
+    left: 30%;
+    width: 100px;
+  }
+  .testi_text {
+    padding: 0rem 0rem 0 5rem;
+  }
+  .testi_wrapper {
+    align-items: center;
+    &.flex-lg-row-reverse {
+      .testi_text {
+        padding: 0rem 5rem 0 0rem;
+      }
+      .quote {
+        left: 60%;
+        width: 100px;
+      }
+    }
+  }
+}
