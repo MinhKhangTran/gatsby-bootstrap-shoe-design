@@ -1,6 +1,6 @@
 #hero {
   background: #639b81;
-  height: 100vh;
+  height: 100%;
   p {
     color: #ffffff;
   }
@@ -26,6 +26,9 @@ h1 {
 }
 
 @media screen and (min-width: 992px) {
+  #hero {
+    height: 100vh;
+  }
   h1 {
     font-size: 9rem;
     text-align: left;
