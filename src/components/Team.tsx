@@ -10,7 +10,7 @@ const Team = () => {
     allGraphCmsTeam: { nodes },
   }: TeamQuery = useStaticQuery(query);
   return (
-    <section id="team">
+    <section id="about">
       <Container>
         <h2 className="section_heading mt-5 text-capitalize">
           {nodes[0].title}

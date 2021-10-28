@@ -1,0 +1,28 @@
+{
+  "navlinks": [
+    {
+      "navlink": "home",
+      "href": "hero"
+    },
+    {
+      "navlink": "features",
+      "href": "features"
+    },
+    {
+      "navlink": "project",
+      "href": "project"
+    },
+    {
+      "navlink": "testimonials",
+      "href": "testimonials"
+    },
+    {
+      "navlink": "guide",
+      "href": "guide"
+    },
+    {
+      "navlink": "about",
+      "href": "about"
+    }
+  ]
+}

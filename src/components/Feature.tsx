@@ -10,7 +10,7 @@ const Feature = () => {
   const feat = nodes[0];
 
   return (
-    <section id="feature">
+    <section id="features">
       <Container>
         <h2 className="section_heading mt-5 text-capitalize">{feat.title}</h2>
         <p className="section_sub lead text-secondary">{feat.desc}</p>

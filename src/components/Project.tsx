@@ -38,11 +38,11 @@ const Project = () => {
               {nodes.map((project) => {
                 return (
                   <a
+                    key={project.id}
                     href={project.img?.url}
                     aria-label={`Click to see more about ${project.alt}`}
                   >
                     <GatsbyImage
-                      key={project.id}
                       // @ts-expect-error
                       image={getImage(project.img?.gatsbyImageData)}
                       alt={project.alt!}
