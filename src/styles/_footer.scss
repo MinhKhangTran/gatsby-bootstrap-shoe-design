@@ -1,9 +1,14 @@
 #footer {
   margin-top: 3rem;
-
-  padding: 2rem 0;
+  background: #38805f;
+  padding: 1.5rem 0;
 }
-
+.footer_socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .footer_socials span {
   font-size: 1rem;
 }
@@ -11,5 +16,11 @@
 @media screen and (min-width: 992px) {
   #footer {
     margin-top: 5rem;
+  }
+  .footer_socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
   }
 }

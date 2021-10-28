@@ -4,7 +4,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 
 const Navigation = () => {
   return (
-    <Navbar bg="white" expand="lg">
+    <Navbar bg="white" expand="lg" collapseOnSelect>
       <Container>
         <Link to="/" className="navbar-brand text-success">
           TamCous
