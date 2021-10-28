@@ -6,8 +6,7 @@ import "@reach/skip-nav/styles.css";
 import smoothscroll from "smoothscroll-polyfill";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  // kick off the polyfill!
-  smoothscroll.polyfill();
+ 
   return (
     <>
       <SkipNavLink />
